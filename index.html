@@ -14,6 +14,16 @@
     <title>woodoo</title>
 </head>
 <body>
+    <section class="menu-overlay"> 
+        <nav class="menu-overlay__navigation">
+            <ul class="menu-overlay__navigation-list">
+                <li>O nas</li>
+                <li>Usługi</li>
+                <li>Galeria</li>
+                <li>Kontakt</li>
+            </ul>
+        </nav>
+    </section>
     <section class="welcome">
         <div class="welcome__wrapper">
             <header class="header">
@@ -29,7 +39,7 @@
                         <li>Kontakt</li>
                     </ul>
                 </nav>
-                <div class="phone-text">+48 (57) 751-15-85</div>
+                <a class="phone-text" href="tel: +48 (57) 751-15-85">+48 (57) 751-15-85</a>
                 <div class="links">
                     <a href="https://instagram.com">
                         <img class ="icon" alt="Woodoo instagram" src="https://cdn.jsdelivr.net/npm/simple-icons@5.10.0/icons/instagram.svg"/>
@@ -38,12 +48,18 @@
                         <img class ="icon" alt="Woodoo facebook" src="https://cdn.jsdelivr.net/npm/simple-icons@5.10.0/icons/facebook.svg"/>
                     </a>
                 </div>
+                <div class="menu-btn">
+                    <div class="menu-btn__burger"></div>
+                </div>
             </header>
             <div class="welcome__message">
                 <h2>Najlepszy fryzjer męski w Poznaniu</h2>
                 <p>Zapomnij na zawsze o problemach z włosami, teraz to jest nasza troska. Twoje włosy i broda  będą wyglądały perfekcyjnie</p>
             </div>
             <button class="button welcome__button">Rezerwacja Online</button>
+        </div>
+        <div class="welcome__image-container">
+            <img class="welcome__image" src="assets/images/barber.png">
         </div>
     </section>
     <section class="features">
@@ -171,11 +187,11 @@
                 <ul class="contacts__list">
                     <li class="contacts__item">
                         <img class="contacts__icon" src="./assets/images/phone.svg">
-                        <p class="contacts__value">+48 (57) 751-15-85</p>
+                        <a class="contacts__value" href="tel: +48 (57) 751-15-85">+48 (57) 751-15-85</a>
                     </li>
                     <li class="contacts__item">
                         <img class="contacts__icon" src="./assets/images/envelope.svg">
-                        <p class="contacts__value">woodoo-barbershop@gmail.com</p>
+                        <a class="contacts__value" href="mailto:woodoo-barbershop@gmail.com">woodoo-barbershop@gmail.com</a>
                     </li>
                     <li class="contacts__item">
                         <img class="contacts__icon" src="./assets/images/wall-clock.svg">
@@ -209,5 +225,6 @@
     <section class="edge">
         <h6 class="edge__text">© 2021 woodoo barbershop</h6>
     </section>
+    <script src="script.js"></script>
 </body>
 </html>
