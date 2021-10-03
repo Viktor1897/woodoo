@@ -76,7 +76,7 @@ h3 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: cenater;
+    align-items: center;
     height: 6.4rem;
 }
 .logo {
@@ -99,15 +99,17 @@ h3 {
     margin-right: 1rem;
     cursor: pointer;
 }
-.navigation ul li:hover {
+.navigation ul li a:hover {
     color: var(--accent-color);
-    cursor: pointer;
 }
 .phone-text {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 1.6rem;
     color: #000000;
+}
+.phone-text:hover {
+    color: var(--accent-color);
 }
 .welcome__message {
     margin-top: 8rem;
@@ -392,13 +394,9 @@ tbody {
         width: 50rem;
         opacity: 0.7;
     }
-    .welcome__image {
-
-    }
-
     .features__wrapper {
         width: 100%;
-        margin: 3rem;
+        margin: 8rem 3rem;
     }
 
     .about-us__wrapper {
