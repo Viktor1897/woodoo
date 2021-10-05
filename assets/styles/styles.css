@@ -46,6 +46,11 @@ a, a:visited {
     border: 1px solid var(--accent-color);
     color: #FFFFFF;
 }
+.welcome__button:focus {
+    background-color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    color: #FFFFFF;
+}
 .gallery__button {
     width: 37rem;
     color: #000000;
@@ -55,6 +60,11 @@ a, a:visited {
     transition: 0.5s;
 }
 .gallery__button:hover {
+    background-color: #000000;
+    color: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+}
+.gallery__button:focus {
     background-color: #000000;
     color: #FFFFFF;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
