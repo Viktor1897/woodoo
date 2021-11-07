@@ -196,7 +196,7 @@ h3 {
 }
 .mobile-header__wrapper {
     max-width: 128rem;
-    margin: 0 3rem;
+    margin: 0 2rem;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -209,8 +209,12 @@ h3 {
     font-size: 1.6rem;
 
 }
+.mobile-header__logo-link {
+    display: block;
+    width: 100px;
+}
 .mobile-header__logo {
-    height: 60%;
+    width: 100%;
 }
 
 /* Features section */
