@@ -27,7 +27,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
 }
 .menu-overlay__links {
     display: flex;
@@ -43,10 +43,13 @@
     font-size: 2.4rem;
 }
 .menu-overlay__navigation-list li {
-    margin-bottom: 1rem;
+    text-align: center;
 }
 .menu-overlay__navigation-list li a{
-    color: #FFFFFF
+    display: block;
+    padding: 1.5rem;
+    color: #FFFFFF;
+    font-size: 3rem;
 }
 .menu-overlay__navigation-list li a:hover {
     color: var(--accent-color); 
