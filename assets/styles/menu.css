@@ -36,23 +36,30 @@
     gap: 2rem;
     color: #fff;
 }
+.menu-overlay__navigation {
+    width: 100%;
+}
 .menu-overlay__navigation-list {
     color: #FFFFFF; 
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 2.4rem;
+    width: 100%;
 }
 .menu-overlay__navigation-list li {
     text-align: center;
+    width: 100%;
 }
 .menu-overlay__navigation-list li a{
     display: block;
     padding: 1.5rem;
+    width: auto;
     color: #FFFFFF;
     font-size: 3rem;
 }
 .menu-overlay__navigation-list li a:hover {
     color: var(--accent-color); 
+    background-color: #00000030;
 }
 
 
