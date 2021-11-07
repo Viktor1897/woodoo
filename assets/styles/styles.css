@@ -6,6 +6,7 @@ html {
     font-size: 10px;
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 p {
     font-family: 'Open Sans', sans-serif;
@@ -52,11 +53,13 @@ a, a:visited {
     color: #FFFFFF;
 }
 .gallery__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 37rem;
     color: #000000;
     background-color: #FFFFFF;
     border: 1px solid #000000;
-    white-space: normal;
     transition: 0.5s;
 }
 .gallery__button:hover {
