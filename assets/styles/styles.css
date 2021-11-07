@@ -61,6 +61,8 @@ a, a:visited {
     background-color: #FFFFFF;
     border: 1px solid #000000;
     transition: 0.5s;
+    white-space: normal;
+    text-align: center;
 }
 .gallery__button:hover {
     background-color: #000000;
@@ -606,6 +608,8 @@ tbody {
     }
     .gallery__button {
         width: 26rem;
+        height: 6rem;
+        line-height: normal;
     }
     .gallery-modal__content {
         width: 80%;
