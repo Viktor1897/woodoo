@@ -6,7 +6,7 @@ html {
     font-size: 10px;
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
 }
 p {
     font-family: 'Open Sans', sans-serif;
@@ -18,9 +18,17 @@ a, a:visited {
     text-decoration: none;
     color: #000000;
 }
-.icon {
-    width: 22px;
+.links {
+    display: flex;
+}
+.links__icon {
+    display: block;
+    font-size: 22px;
     margin: 1rem;
+    transition: color .2s;
+}
+.links__icon:hover {
+    color: var(--accent-color);
 }
 .button {
     height: 7.5rem;

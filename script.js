@@ -41,3 +41,20 @@ galleryImages.forEach((img) => img.onclick = () => {
 modalCloseBtn.onclick = () => {
   modal.classList.add('hidden');
 }
+
+//Smooth links
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        let href = this.getAttribute('href').substring(1);
+        const scrollTarget = document.getElementById(href);
+        const elementPosition = scrollTarget.getBoundingClientRect().top;
+
+        window.scrollBy({
+            top: elementPosition,
+            behavior: 'smooth'
+        });
+    });
+});
+	
