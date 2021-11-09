@@ -42,16 +42,18 @@ modalCloseBtn.onclick = () => {
   modal.classList.add('hidden');
 }
 
-//Smooth links
-const smoothLinks = document.querySelectorAll('a[href^="#"]');
-for (let smoothLink of smoothLinks) {
-    smoothLink.addEventListener('click', function (e) {
-        e.preventDefault();
-        const id = smoothLink.getAttribute('href');
+//Jquery script for links smoothing
+$(document).ready(function(){
+  $("a").on('click', function(event) {
 
-        document.querySelector(id).scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        });
-    });
-};
+    if (this.hash !== "") {
+      event.preventDefault();
+      let hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+        window.location.hash = hash;
+      });
+    } 
+  });
+});
