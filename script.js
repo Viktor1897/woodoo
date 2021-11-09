@@ -43,18 +43,15 @@ modalCloseBtn.onclick = () => {
 }
 
 //Smooth links
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-
-    link.addEventListener('click', function(e) {
+const smoothLinks = document.querySelectorAll('a[href^="#"]');
+for (let smoothLink of smoothLinks) {
+    smoothLink.addEventListener('click', function (e) {
         e.preventDefault();
-        let href = this.getAttribute('href').substring(1);
-        const scrollTarget = document.getElementById(href);
-        const elementPosition = scrollTarget.getBoundingClientRect().top;
+        const id = smoothLink.getAttribute('href');
 
-        window.scrollBy({
-            top: elementPosition,
-            behavior: 'smooth'
+        document.querySelector(id).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
         });
     });
-});
-	
+};
