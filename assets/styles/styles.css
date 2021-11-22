@@ -17,16 +17,16 @@ a, a:visited {
     text-decoration: none;
     color: #000000;
 }
-.links {
+.header__media-links {
     display: flex;
 }
-.links__icon {
+.header__media-icon {
     display: block;
     font-size: 22px;
     margin: 1rem;
     transition: color .2s;
 }
-.links__icon:hover {
+.header__media-link:hover .header__media-icon {
     color: var(--accent-color);
 }
 .button {
