@@ -10,8 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/styles/style-reset.css">
     <link rel="stylesheet" href="./assets/styles/menu.css">
-    <link rel="stylesheet" href="./assets/styles/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.4/dist/css/splide.min.css">
+    <link rel="stylesheet" href="./assets/styles/styles.css">
     <title>woodoo</title>
 </head>
 <body>
@@ -144,18 +144,38 @@
         </div>
     </section>
     <section class="gallery" id="gallery">
-        <div class="gallery__wrapper">
+        <div class="gallery__wrapper splide">
             <h3 class="gallery__title">Galeria</h3>
-            <div class="gallery__images-container">
-                <img class="gallery__image" src="assets/images/galery-images/1.jpg" alt="man"/>
-                <img class="gallery__image" src="assets/images/galery-images/2.jpg" alt="man"/>
-                <img class="gallery__image" src="assets/images/galery-images/3.jpg" alt="man"/>
-                <img class="gallery__image" src="assets/images/galery-images/4.jpg" alt="man"/>
-                <img class="gallery__image" src="assets/images/galery-images/5.jpg" alt="man"/>
-                <img class="gallery__image" src="assets/images/galery-images/6.jpg" alt="man"/>
-                <img class="gallery__image" src="assets/images/galery-images/7.jpg" alt="man"/>
-                <img class="gallery__image" src="assets/images/galery-images/8.jpg" alt="man"/>
-                <img class="gallery__image gallery__image_extra" src="assets/images/galery-images/9.jpg" alt="man"/>
+            <div class="gallery__images-container splide__track">
+                <ul class="gallery__list splide__list">
+                    <li class="splide__slide">
+                        <img class="gallery__image" src="assets/images/galery-images/1.jpg" alt="man"/>
+                    </li>
+                    <li class="splide__slide">
+                        <img class="gallery__image" src="assets/images/galery-images/2.jpg" alt="man"/>
+                    </li>
+                    <li class="splide__slide">
+                        <img class="gallery__image" src="assets/images/galery-images/3.jpg" alt="man"/>
+                    </li>
+                    <li class="splide__slide">
+                        <img class="gallery__image" src="assets/images/galery-images/4.jpg" alt="man"/>
+                    </li>
+                    <li class="splide__slide">
+                        <img class="gallery__image" src="assets/images/galery-images/9.jpg" alt="man"/>
+                    </li>
+                    <li class="splide__slide">
+                        <img class="gallery__image" src="assets/images/galery-images/5.jpg" alt="man"/>
+                    </li>
+                    <li class="splide__slide">
+                        <img class="gallery__image" src="assets/images/galery-images/6.jpg" alt="man"/>
+                    </li>
+                    <li class="splide__slide">
+                        <img class="gallery__image" src="assets/images/galery-images/7.jpg" alt="man"/>
+                    </li>
+                    <li class="splide__slide">
+                        <img class="gallery__image" src="assets/images/galery-images/8.jpg" alt="man"/>
+                    </li>
+                </ul>
             </div>
             <a class="button gallery__button" target="_blank" href="https://www.instagram.com/woodoo_barbershop_poznan/">
                 więcej zdjęć na instagramie
@@ -219,7 +239,7 @@
     </section>
     <section class="gallery-modal hidden">
         <i class="gallery-modal__close-btn bi bi-x"></i>
-        <div id="main-slider" class="splide">
+        <div id="main-slider" class="gallery-modal__slider splide">
             <div class="splide__track">
                 <ul class="splide__list">
                     <li class="splide__slide">
