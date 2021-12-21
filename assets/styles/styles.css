@@ -384,10 +384,13 @@ tbody {
 .gallery-modal__close-btn {
     position: absolute;
     top: 3rem;
-    right: 5rem;
+    right: 3rem;
     font-size: 42px;
     cursor: pointer;
     color: #F5F5F5;
+    background: #ffffff20;
+    border-radius: 8px;
+    z-index: 1;
 }
 
 @keyframes zoom {
@@ -621,6 +624,9 @@ tbody {
     .about-us__wrapper {
         margin: 7rem 3rem 0rem; 
     }
+    .gallery-modal__close-btn {
+        background-color: #00000020;
+    }
 }
 @media screen and (max-width: 600px) {
     .welcome__message h2 {
@@ -637,6 +643,7 @@ tbody {
         width: 26rem;
         height: 6rem;
         line-height: normal;
+        text-align: center;
     }
 }
 
