@@ -412,9 +412,6 @@ tbody {
     justify-content: center;
     align-items: center;
 }
-.footer__link-icon {
-    /* color: var(--accent-color); */
-}
 .contacts {
     width: 50%;
     padding-right: 4rem;

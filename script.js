@@ -6,6 +6,8 @@ const modal = document.querySelector('.gallery-modal');
 const modalCloseBtn = document.querySelector('.gallery-modal__close-btn');
 const galleryImages = document.querySelectorAll('.gallery__image');
 let menuOpen = false;
+let modalSplide;
+
 
 //Footer copyright date
 footerText.textContent = `© ${new Date().getFullYear()} woodoo barbershop`;
@@ -45,18 +47,16 @@ $(document).ready(function(){
 modal.onclick = (e) => {
   if (e.target.classList.contains('gallery-modal')) {
     modal.classList.add('hidden');
-    document.querySelector('.thumbnail.is-active').classList.remove('is-active');
   }
 }
 
 galleryImages.forEach((img, index) => img.onclick = () => {
   modal.classList.remove('hidden');
-  initModalSlider(index);
+  modalSplide.go(index);
 });
 
 modalCloseBtn.onclick = () => {
   modal.classList.add('hidden');
-  document.querySelector('.thumbnail.is-active').classList.remove('is-active');
 }
 
 //Splide gallery
@@ -88,10 +88,9 @@ document.addEventListener( 'DOMContentLoaded', function () {
       ).mount();
   });
 
-  function initModalSlider(index) {
-    let splide = new Splide( '#main-slider', {
+  document.addEventListener( 'DOMContentLoaded', function () {
+    modalSplide = new Splide( '#main-slider', {
       pagination: false,
-      start: index,
       type: 'loop',
     } );
 
@@ -104,12 +103,12 @@ document.addEventListener( 'DOMContentLoaded', function () {
 
     function initThumbnail( thumbnail, index ) {
       thumbnail.addEventListener( 'click', function () {
-        splide.go( index );
+        modalSplide.go( index );
       } );
     }
 
-    splide.on( 'mounted move', function () {
-      let thumbnail = thumbnails[ splide.index ];
+    modalSplide.on( 'mounted move', function () {
+      let thumbnail = thumbnails[ modalSplide.index ];
 
       if ( thumbnail ) {
         if ( current ) {
@@ -121,5 +120,5 @@ document.addEventListener( 'DOMContentLoaded', function () {
       }
     } );
 
-    splide.mount();
-  }
+    modalSplide.mount();
+  });
