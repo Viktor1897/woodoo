@@ -323,6 +323,7 @@ tbody {
 }
 .table__cell_title {
     padding-right: 2rem;
+    text-transform: uppercase;
 }
 .table__cell_price {
     color: var(--accent-color);
@@ -673,6 +674,11 @@ tbody {
     .gallery-modal__close-btn {
         background-color: #00000020;
     }
+
+    .footer__map-container {
+        height: 300px;
+        width: 120%;
+    }
 }
 @media screen and (max-width: 600px) {
     .welcome__message h2 {
@@ -716,6 +722,9 @@ tbody {
     .splide__arrow--prev {
         left: -2em;
     }
+    .table__cell {
+        font-size: 1.8rem;
+    }
 }
 
 @media screen and (max-width: 380px) {
@@ -727,9 +736,6 @@ tbody {
     }
     .welcome__message p {
         margin-top: 1rem;
-        font-size: 1.8rem;
-    }
-    .table__cell {
         font-size: 1.8rem;
     }
     .welcome__image-container {
