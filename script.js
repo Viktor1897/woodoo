@@ -122,3 +122,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
 
     modalSplide.mount();
   });
+
+//document.querySelector('.booksy-widget-button').style.backgroundImage = 'url(assets/images/feature-coffee.svg)';
+document.querySelector('.booksy-widget-button').textContent = "Rezerwacja";
+
