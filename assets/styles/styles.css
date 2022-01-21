@@ -632,7 +632,9 @@ tbody {
     .about-us__image-container {
         width: 100%;
     }
-    
+    .edge__text {
+        margin: 3rem auto;
+    }
 
     .welcome__image-container {
         overflow: hidden;
@@ -734,6 +736,9 @@ tbody {
     }
     .contacts__list {
         gap: 2rem;
+    }
+    .edge__text {
+        margin: 2.5rem auto;
     }
 }
 
