@@ -619,6 +619,7 @@ tbody {
     }
     .footer__wrapper {
         flex-direction: column;
+        margin: 6rem auto;
     }
     .contacts {
         width: 100%;
@@ -724,6 +725,15 @@ tbody {
     }
     .table__cell {
         font-size: 1.8rem;
+    }
+    .footer__wrapper {
+        margin: 4rem auto;
+    }
+    .contacts {
+        gap: 4rem;
+    }
+    .contacts__list {
+        gap: 2rem;
     }
 }
 
