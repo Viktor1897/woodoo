@@ -10,7 +10,7 @@ let modalSplide;
 
 
 //Footer copyright date
-footerText.textContent = `© ${new Date().getFullYear()} woodoo barbershop`;
+footerText.textContent = `© ${new Date().getFullYear()} simple barbershop`;
 
 //Burger menu
 menuBtn.addEventListener('click', () => {
@@ -123,6 +123,5 @@ document.addEventListener( 'DOMContentLoaded', function () {
     modalSplide.mount();
   });
 
-//document.querySelector('.booksy-widget-button').style.backgroundImage = 'url(assets/images/feature-coffee.svg)';
 document.querySelector('.booksy-widget-button').textContent = "Rezerwacja";
 
