@@ -29,6 +29,16 @@ a, a:visited {
 .header__media-link:hover .header__media-icon {
     color: var(--accent-color);
 }
+
+.lang-switcher-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    width: 48px;
+}
+.lang-switcher-img {
+ width: 100%;
+}
 .button {
     height: 7.5rem;
     border: none;
