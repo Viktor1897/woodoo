@@ -165,3 +165,8 @@ function changeLanguage() {
   }
   langIcon.src = `./assets/images/${lang}.svg`;
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+  const windowHeight = document.documentElement.clientHeight;
+  document.querySelector('.welcome').style.height = windowHeight + 'px';
+});

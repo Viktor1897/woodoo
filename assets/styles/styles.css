@@ -100,7 +100,7 @@ h3 {
 /* Welcome section */
 .welcome {
     background: linear-gradient(109.72deg, #F0F0F0 0.94%, #D5D5D5 92.31%);
-    height: 100vh;
+    height: 1000px;
     min-height: 50rem;
     max-height: 108rem;
     position: relative;
