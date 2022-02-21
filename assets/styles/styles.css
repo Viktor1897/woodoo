@@ -823,3 +823,62 @@ tbody {
     height: 100%;
     object-fit: cover;
 }
+
+/* call button */
+.call-btn {
+    display: none;
+    position: fixed;
+    bottom: 4rem;
+    left: 4rem;
+    background: #4fbaea;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    color: #FFF;
+    text-align: center;
+    line-height: 60px;
+    cursor: pointer;
+}
+
+.call-btn:before,
+.call-btn:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    border: 1px solid #4fbaea;
+    border-radius: 50%;
+    left: -15px;
+    right: -15px;
+    top: -15px;
+    bottom: -15px;
+    animation: animate 1.5s linear infinite;
+}
+
+.call-btn:after{
+	animation-delay: .5s;
+}
+
+@keyframes animate
+{
+0%
+{
+    transform: scale(0.5);
+    opacity: 0;
+}
+50%
+{
+    opacity: 1;
+}
+100%
+{
+    transform: scale(1.2);
+    opacity: 0;
+}
+}
+
+@media screen and (max-width: 800px) {
+    .call-btn {
+        display: block;
+    }
+}
