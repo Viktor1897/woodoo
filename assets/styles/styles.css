@@ -699,6 +699,9 @@ tbody {
         grid-template-columns: repeat(1, 1fr);
         gap: 1rem;
     }
+    .features__item:not(:first-child) {
+        margin-top: 4rem;
+    }
     .gallery__images-container {
         grid-template-columns: 20rem 20rem;
     }
