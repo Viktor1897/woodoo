@@ -625,12 +625,6 @@ tbody {
     .navigation {
         display: none;
     }
-    .features__item {
-        margin-top: 5rem;
-    }
-    .features__item:first-child {
-        margin-top: 0;
-    }
     .footer__wrapper {
         flex-direction: column;
         margin: 6rem auto;

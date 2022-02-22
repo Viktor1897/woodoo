@@ -150,10 +150,10 @@ const translationEN = ['About', 'Services', 'Gallery', 'Contact',
 
 let lang = 'pl';
 
-const switchLangBtn = document.querySelector('.lang-switcher-btn');
+const switchLangBtns = document.querySelectorAll('.lang-switcher-btn');
 const langIcon = document.querySelector('.lang-switcher-img');
 
-switchLangBtn.addEventListener('click', changeLanguage);
+switchLangBtns.forEach(btn => btn.addEventListener('click', changeLanguage));
 
 function changeLanguage() {
   if (lang === 'pl') {
