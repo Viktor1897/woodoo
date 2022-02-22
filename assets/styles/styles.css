@@ -74,6 +74,7 @@ a, a:visited {
     justify-content: center;
     align-items: center;
     width: 37rem;
+    margin-top: 3rem;
     color: #000000;
     background-color: #FFFFFF;
     border: 1px solid #000000;
@@ -351,10 +352,10 @@ tbody {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 5rem;
 }
 .gallery__images-container {
     width: 100%;
+    margin-top: 3rem;
 }
 .gallery__list {
     text-align: center;
@@ -577,10 +578,6 @@ tbody {
     .welcome__image-container {
         opacity: 0.7;
     }
-    .features__wrapper {
-        width: 100%;
-        margin: 8rem 3rem;
-    }
 
     .about-us__wrapper {
         width: 100%;
@@ -596,9 +593,14 @@ tbody {
         margin-top: 5rem;
     }
 
+    .features__wrapper,
     .services__wrapper {
         width: 100%;
         margin: 5rem 3rem;
+    }
+
+    .gallery__wrapper {
+        margin: 5rem auto;
     }
     .table {
         width: 100%;
