@@ -133,7 +133,7 @@ const translationPL = ['O nas', 'Usługi', 'Galeria', 'Kontakt', 'Najlepszy fryz
 'O nas', 'SIMPLE BARBERSHOP – to przede wszystkim zespół pro…, doradzimy stylizację i nauczymy cię jej używać.', 
 'Nie rozdzielamy ludzi. Dlatego zarówno i student, …ewniamy, że twój wizerunek jest w dobrych rękach.', 'Usługi', 
 'Strzyżenie męskie', 'Strzyżenie Brody', 'Strzyżenie chłopca (do 12 lat)', 'Strzyżenie maszynką (2 nasadki)', 
-'Strzyżenie męskie + broda', 'GOLENIE OSTRĄ BRZYTWĄ', 'KOLORYZACJA włosów', 'KOLORYZACJA brody', 'Woskowanie (jedna strefa)', 
+'Strzyżenie męskie + broda', 'Strzyżenie tata + syn', 'KOLORYZACJA włosów', 'KOLORYZACJA brody', 'Woskowanie (jedna strefa)', 
 'Oczyszczanie twarzy (czarna maska)', 'UKłADanie włosów', 'Galeria', 'Więcej zdjęć na instagramie', 'Kontakt', 'Pn - Ndz: 9:00 - 21:00', 
 'Poznań, ul. Bukowska 78', 'O nas', 'Usługi', 'Galeria', 'Kontakt'];
 
@@ -144,14 +144,14 @@ const translationEN = ['About', 'Services', 'Gallery', 'Contact',
 'Parking', 'We also have free parking for our clients', 'About us', 
 'SIMPLE BARBERSHOP - it is primarily a team of professionals. All our masters have unique hairdressing skills. We perfectly select the best style that suits you, we give  advise on styling and teach how to obtain what you want.',
 'We don\'t separate people. Therefore, both student and businessman feel comfortable with us. It is your decision to trust us, the rest falls on our shoulders. We ensure that your hair is in a good hands.',
-'Services', 'Men\'s haircut', 'Beard trim (Grooming)', 'Kids haircut (up to 12 years old)', 'Haircut with a razor (2 attachments)', 'Men\'s haircut + beard', 
-'Shaving with a sharp razor', 'Hair colouring', 'Beard coloring', 'Face wax (one zone)', 'Face cleansing (Black mask)', 'Hair styling', 'Gallery', 'MORE PHOTOS ON INSTAGRAM',
+'Services', 'Men\'s haircut', 'Beard trim', 'Kids haircut (up to 12 years old)', 'Haircut with a razor (2 attachments)', 'Men\'s haircut + beard trim', 
+'HAIRCUT MAN + CHILDREN', 'Hair colouring', 'Beard coloring', 'Face wax (one zone)', 'Face cleaning (Black mask)', 'Hair styling', 'Gallery', 'MORE PHOTOS ON INSTAGRAM',
 'Contacts', 'Mon - Sun: 9:00 - 21:00', 'Poznan, Bukowska 78 st.', 'About', 'Services', 'Gallery', 'Contact']
 
 let lang = 'pl';
 
 const switchLangBtns = document.querySelectorAll('.lang-switcher-btn');
-const langIcon = document.querySelector('.lang-switcher-img');
+const langIcons = document.querySelectorAll('.lang-switcher-img');
 
 switchLangBtns.forEach(btn => btn.addEventListener('click', changeLanguage));
 
@@ -165,7 +165,7 @@ function changeLanguage() {
     document.querySelector('.booksy-widget-button').textContent = 'Rezerwacja';
     lang = 'pl';
   }
-  langIcon.src = `./assets/images/${lang === 'en' ? 'pl' : 'en'}.svg`;
+  langIcons.forEach(icon => icon.src = `./assets/images/${lang === 'en' ? 'pl' : 'en'}.svg`);
 }
 
 document.addEventListener('DOMContentLoaded', function () {
