@@ -836,6 +836,7 @@ tbody {
     text-align: center;
     line-height: 60px;
     cursor: pointer;
+    z-index: 2;
 }
 
 .call-btn:before,
