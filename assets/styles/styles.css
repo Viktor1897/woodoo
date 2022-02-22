@@ -51,17 +51,18 @@ a, a:visited {
     white-space: nowrap;
 }
 .welcome__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 7rem;
     width: 27rem;
     color: #FFFFFF;
     background-color: #000000;
-    border: 1px solid #000000;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
     transition: 0.5s;
 }
 .welcome__button:hover {
     background-color: var(--accent-color);
-    border: 1px solid var(--accent-color);
     color: #FFFFFF;
 }
 .welcome__button:focus {
@@ -663,8 +664,7 @@ tbody {
     .footer__links {
         gap: 2rem;
     }
-
-
+    
     .gallery__wrapper {
         margin: 7rem auto 3rem;
     }
