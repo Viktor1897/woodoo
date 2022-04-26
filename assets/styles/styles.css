@@ -290,7 +290,7 @@ h3 {
     line-height: 3.2rem;
 }
 .about-us__image-container {
-    width: 50%;
+    width: 40%;
 }
 .about-us__image {
     width: 100%;
@@ -634,7 +634,7 @@ tbody {
         margin-top: 3rem;
     }
     .about-us__image-container {
-        width: 100%;
+        width: 80%;
     }
     .edge__text {
         margin: 3rem auto;
@@ -722,6 +722,9 @@ tbody {
 }
 
 @media screen and (max-width: 540px) {
+    .about-us__image-container {
+        width: 100%;
+    }
     .gallery__images-container {
         grid-template-columns: 24rem 24rem;
     }
