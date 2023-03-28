@@ -132,9 +132,9 @@ const translationPL = ['O nas', 'Usługi', 'Galeria', 'Kontakt', 'Najlepszy fryz
 'Parking', 'Także mamy bezpłatny parking dla naszych klientów', 'O nas', 
 'SIMPLE BARBERSHOP – to przede wszystkim zespół profesjonalistów. Wszyscy nasi mistrzowie posiadają unikalne umiejętności fryzjerskie. Dobierzemy dla ciebie dokładnie taki wizerunek, który ci odpowiada, doradzimy stylizację i nauczymy cię jej używać.', 
 'Nie rozdzielamy ludzi. Dlatego zarówno i student, i biznesmen poczują się u nas komfortowo. Twoją decyzją jest nam zaufać, wszystko inne spada na nasze barki. Zapewniamy, że twój wizerunek jest w dobrych rękach.', 'Usługi', 
-'Strzyżenie męskie (TOP BARBER)', 'Strzyżenie męskie', 'Strzyżenie Brody', 'Strzyżenie chłopca (do 12 lat)', 'Strzyżenie maszynką (1 nasadka)', 
-'Strzyżenie męskie + broda', 'Strzyżenie tata + syn', 'Odsiwianie włosów', 'Odsiwianie brody', 'Woskowanie (jedna strefa)', 
-'Oczyszczanie twarzy (czarna maska)', 'UKłADanie włosów', 'Płatki pod oczy', 'Koloryzacja włosów', 'Galeria', 'Więcej zdjęć na instagramie', 'Kontakt', 'Pn - Ndz: 9:00 - 21:00', 
+'Strzyżenie (TOP BARBER)', 'Strzyżenie', 'Strzyżenie Brody', 'Strzyżenie dziecięce (do 12 lat)', 'Strzyżenie maszynką (1 nakładka)', 
+'Strzyżenie + broda', 'Strzyżenie tata + syn', 'Odsiwianie włosów', 'Odsiwianie brody', 'Woskowanie (jedna strefa)', 
+'Oczyszczanie twarzy (czarna maska)', 'UkłAdanie włosów', 'Płatki pod oczy', 'Koloryzacja włosów', 'Galeria', 'Więcej zdjęć na instagramie', 'Kontakt', 'Pn - Ndz: 9:00 - 21:00', 
 'Poznań, ul. Bukowska 78', 'O nas', 'Usługi', 'Galeria', 'Kontakt'];
 
 const translationEN = ['About', 'Services', 'Gallery', 'Contact', 
@@ -144,8 +144,8 @@ const translationEN = ['About', 'Services', 'Gallery', 'Contact',
 'Parking', 'We also have free parking for our clients', 'About us', 
 'SIMPLE BARBERSHOP - it is primarily a team of professionals. All our masters have unique hairdressing skills. We perfectly select the best style that suits you, we give  advise on styling and teach how to obtain what you want.',
 'We don\'t separate people. Therefore, both student and businessman feel comfortable with us. It is your decision to trust us, the rest falls on our shoulders. We ensure that your hair is in a good hands.',
-'Services', 'Men\'s haircut (TOP BARBER)', 'Men\'s haircut', 'Beard trim', 'kids HAIRCUT UP TO 12 YEARS', 'CLIPPER HAIRCUT (1 ATTACHABLE GUARD)', 'Men\'s haircut + beard trim', 
-'HAIRCUT MAN + CHILD', 'GRAY HAIR CAMO', 'GRAY BEARD CAMO', 'WAXING SERVICE (ONE ZONE)', 'BLACK MASK', 'styling', 'patches', 'hair coloring ', 'Gallery', 'MORE PHOTOS ON INSTAGRAM',
+'Services', 'Haircut (TOP BARBER)', 'Haircut', 'Beard trim', 'Kids HAIRCUT UP TO 12 YEARS', 'CLIPPER HAIRCUT (1 ATTACHABLE GUARD)', 'Haircut + beard', 
+'Haircut Man + Children', 'GRAY HAIR CAMO', 'GRAY BEARD CAMO', 'WAXING SERVICE (ONE ZONE)', 'BLACK MASK', 'styling', 'patches', 'hair coloring ', 'Gallery', 'MORE PHOTOS ON INSTAGRAM',
 'Contacts', 'Mon - Sun: 9:00 - 21:00', 'Poznan, Bukowska 78 st.', 'About', 'Services', 'Gallery', 'Contact']
 
 let lang = 'pl';
