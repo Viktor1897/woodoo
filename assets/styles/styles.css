@@ -825,7 +825,7 @@ tbody {
     position: fixed;
     bottom: 4rem;
     left: 4rem;
-    background: #4fbaea;
+    background: #ff1744;
     border-radius: 50%;
     width: 60px;
     height: 60px;
@@ -842,7 +842,7 @@ tbody {
     content: " ";
     display: block;
     position: absolute;
-    border: 1px solid #4fbaea;
+    border: 1px solid #ff1744;
     border-radius: 50%;
     left: -15px;
     right: -15px;
