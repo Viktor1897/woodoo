@@ -40,7 +40,8 @@ a {
 }
 
 .welcome__button,
-.gallery__button {
+.gallery__button,
+.academy__button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,10 +68,15 @@ a {
     box-shadow: none;
 
 }
-.welcome__button:hover {
+.academy__button {
+    margin-top: 4rem;
+}
+.welcome__button:hover,
+.academy__button:hover {
     background-color: var(--accent-color);
 }
-.welcome__button:focus {
+.welcome__button:focus,
+.academy__button:focus {
     background-color: var(--accent-color);
 }
 
@@ -85,7 +91,7 @@ section {
     display: flex;
 }
 h3 {
-    /* about-us__title, services__title, gallery__title */
+    /* about-us__title, services__title, gallery__title, academy__title */
     font-size: 4.4rem;
     text-transform: uppercase;
     font-weight: 700;
@@ -409,6 +415,46 @@ tbody {
     }
 }
 
+/* Academy section */
+.academy {
+    background-color: #DEDEDE87;
+}
+.academy__wrapper {
+    max-width: 128rem;
+    width: 80%;
+    margin: 8rem auto 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.academy__content-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-bottom: 8rem;
+}
+.academy__title {
+    max-width: 96rem;
+    text-align: center;
+}
+.academy__text {
+    margin-top: 9rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+}
+.academy__image {
+    position: absolute;
+    bottom: 0;
+    max-width: 480px;
+    width: 100%;
+    z-index: -1;
+}
+
 /* Footer section */
 .footer {
     background-color: #1F1F1F;
@@ -681,12 +727,19 @@ tbody {
         background-color: #00000020;
     }
 
+    .academy__text {
+        margin-top: 7rem;
+    }
+
     .footer__map-container {
         height: 300px;
         width: 120%;
     }
 }
 @media screen and (max-width: 600px) {
+    h3 {
+        font-size: 3.4rem;
+    }
     .welcome__message h2 {
         font-size: 4rem;
     }
@@ -709,6 +762,14 @@ tbody {
         height: 6rem;
         line-height: normal;
         text-align: center;
+    }
+
+    .academy__wrapper {
+        margin: 6rem auto 0;
+    }
+
+    .academy__content-container {
+        padding-bottom: 6rem;
     }
 
     .booksy-widget-container {
@@ -756,6 +817,9 @@ tbody {
 }
 
 @media screen and (max-width: 400px) {
+    h3 {
+        font-size: 3rem;
+    }
     .welcome__button {
         margin-top: 7rem;
     }
@@ -768,6 +832,10 @@ tbody {
     }
     .welcome__image-container {
         width: 45rem;
+    }
+
+    .academy__text {
+        margin-top: 5rem;
     }
 }
 .hidden {
