@@ -40,7 +40,10 @@ a {
 }
 
 .welcome__button,
-.gallery__button {
+.gallery__button,
+.academy__button,
+.footer__site_button,
+.footer__phone-link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,10 +70,33 @@ a {
     box-shadow: none;
 
 }
-.welcome__button:hover {
+.academy__button {
+    margin-top: 4rem;
+}
+
+.footer__site_button {
+    margin-top: 0;
+    height: 6.5rem;
+    width: 100%;
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+.footer__phone-link {
+    margin-top: 0;
+    height: 5.7rem;
+    color: #FFFFFF;
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+    box-shadow: none;
+}
+
+.welcome__button:hover,
+.academy__button:hover {
     background-color: var(--accent-color);
 }
-.welcome__button:focus {
+.welcome__button:focus,
+.academy__button:focus {
     background-color: var(--accent-color);
 }
 
@@ -85,7 +111,7 @@ section {
     display: flex;
 }
 h3 {
-    /* about-us__title, services__title, gallery__title */
+    /* about-us__title, services__title, gallery__title, academy__title */
     font-size: 4.4rem;
     text-transform: uppercase;
     font-weight: 700;
@@ -158,15 +184,13 @@ h3 {
     transform: scaleX(1);
     transform-origin: left;
   }
-.phone-text {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 1.4rem;
-    color: #000000;
+
+.header__link-icon {
+    filter: invert();
+    width: 29px;
+    height: 29px;
 }
-.phone-text:hover {
-    color: var(--accent-color);
-}
+
 .welcome__message {
     margin-top: 12rem;
     width: 100%;
@@ -213,13 +237,6 @@ h3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-.mobile-header__phone-text {
-    color: #FFFFFF;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 1.6rem;
-
 }
 .mobile-header__logo-link {
     display: block;
@@ -409,25 +426,101 @@ tbody {
     }
 }
 
+/* Academy section */
+.academy {
+    background-color: #DEDEDE87;
+}
+.academy__wrapper {
+    max-width: 128rem;
+    width: 80%;
+    margin: 8rem auto 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.academy__content-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-bottom: 8rem;
+}
+.academy__title {
+    max-width: 96rem;
+    text-align: center;
+}
+.academy__text {
+    margin-top: 9rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+.academy__image {
+    position: absolute;
+    bottom: 0;
+    max-width: 480px;
+    width: 100%;
+    z-index: -1;
+}
+
 /* Footer section */
 .footer {
     background-color: #1F1F1F;
 }
 .footer__wrapper {
     max-width: 128rem;
-    width: 80%;
-    margin: 8rem auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-.contacts {
-    width: 50%;
-    padding-right: 4rem;
+    width: 100%;
+    margin: 5rem auto;
     display: flex;
     flex-direction: column;
-    gap: 5rem;
+    align-items: center;
+}
+.footer__sites {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.footer__site {
+    padding: 0 2rem;
+    max-width: 52rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    margin-bottom: 6.5rem;
+}
+.footer__site_texts {
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+}
+.footer__site_title {
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+}
+.footer__title {
+    color: #FFFFFF;
+    margin-bottom: 7rem;
+}
+.footer__booksy-link {
+    display: flex;
+    gap: 1.5rem;
+    cursor: pointer;
+}
+.contacts {
+    max-width: 115rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 .contacts__title {
     font-family: 'Montserrat', sans-serif;
@@ -437,9 +530,10 @@ tbody {
     color: #FFFFFF;
 }
 .contacts__list {
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 2.6rem;
+    gap: 1rem;
 }
 .contacts__item {
     display: flex;
@@ -457,16 +551,27 @@ tbody {
     font-size: 1.5rem;
     color: #FFFFFF;
 }
+.footer__links-container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
 .footer__links {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     gap: 4rem;
 }
+.footer__logo {
+    filter: invert(0.4);
+}
 .footer__map-container {
     display: flex;
-    width: 50%;
-    height: 100%;
+    max-width: 520px;
+    width: 100%;
+    aspect-ratio: 2 / 1;
 }
 .map {
     width: 100%;
@@ -491,18 +596,28 @@ tbody {
 
 /*BOOKSY WIDGET*/
 
-.booksy-widget-container {
+.book-link {
     position: fixed;
-    right: -10px;
     bottom: 0;
-    z-index: 5;
-    width: 7rem!important;
-    height: 25rem!important;
+    right: -1rem;
     background: linear-gradient(315deg, #000000 90%, #00000000 90%);
+    width: 7rem;
+    height: 25rem;
+    color: #FFFFFF;
+    font-size: 20px;
+    display: flex!important;
+    align-items: center;
+    justify-content: center;
+    writing-mode:vertical-rl;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
     animation: shadow-anm 1.2s infinite ease-in-out;
     transition: all 0.5s;
+    z-index: 5;
 }
-.booksy-widget-container:hover {
+
+.book-link:hover {
     animation: none;
     right: 0;
     background: linear-gradient(315deg, var(--accent-color) 90%, #00000000 90%);
@@ -518,21 +633,6 @@ tbody {
     to {
         filter: drop-shadow(#000000 0 0 5px);
     }
-}
-
-.booksy-widget-button {
-    background-image: none!important;
-    width: 100%!important;
-    height: 100%!important;
-    color: #FFFFFF;
-    font-size: 20px;
-    display: flex!important;
-    align-items: center;
-    justify-content: center;
-    writing-mode:vertical-rl;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 600;
 }
 
 @media screen and (max-width: 1500px) {
@@ -629,10 +729,6 @@ tbody {
         width: 100%;
         padding-right: 0;
     }
-    .footer__map-container {
-        width: 100%;
-        margin-top: 3rem;
-    }
     .about-us__image-container {
         width: 80%;
     }
@@ -681,12 +777,14 @@ tbody {
         background-color: #00000020;
     }
 
-    .footer__map-container {
-        height: 300px;
-        width: 120%;
+    .academy__text {
+        margin-top: 7rem;
     }
 }
 @media screen and (max-width: 600px) {
+    h3 {
+        font-size: 3.4rem;
+    }
     .welcome__message h2 {
         font-size: 4rem;
     }
@@ -711,13 +809,20 @@ tbody {
         text-align: center;
     }
 
-    .booksy-widget-container {
-        width: 5rem!important;
-        height: 22rem!important;
+    .academy__wrapper {
+        margin: 6rem auto 0;
     }
-    .booksy-widget-button {
+
+    .academy__content-container {
+        padding-bottom: 6rem;
+    }
+
+    .book-link {
+        width: 5rem;
+        height: 22rem;
+    }
+    .book-link {
         font-size: 18px;
-        margin-left: -5px!important;
     }
 }
 
@@ -756,6 +861,9 @@ tbody {
 }
 
 @media screen and (max-width: 400px) {
+    h3 {
+        font-size: 3rem;
+    }
     .welcome__button {
         margin-top: 7rem;
     }
@@ -768,6 +876,10 @@ tbody {
     }
     .welcome__image-container {
         width: 45rem;
+    }
+
+    .academy__text {
+        margin-top: 5rem;
     }
 }
 .hidden {
