@@ -71,7 +71,7 @@
             <header class="header">
                 <div class="logo">
                     <h1 class="hidden">Simple</h1>
-                    <a href="\"><img src="assets/images/Logo.svg"></a>
+                    <a href="\"><img src="assets/images/Logo.svg" /></a>
                 </div>
                 <nav class="navigation">
                     <ul>
@@ -81,7 +81,11 @@
                         <li><a href="#contacts" class="lang">Kontakt</a></li>
                     </ul>
                 </nav>
-                <a class="phone-text" href="tel: +48 786-677-659">+48 786-677-659</a>
+                    <ul class="menu-overlay__links">
+                        <li><a target="_blank" href="https://www.instagram.com/simple_barbershop_poznan/"><img class="header__link-icon" src="./assets/images/instagram-white.svg"></a></li>
+                        <li><a target="_blank" href="https://www.facebook.com/simplebarberpoz/?ref=pages_you_manage"><img class="header__link-icon" src="./assets/images/facebook-white.svg"></a></li>
+                    
+                    </ul>
                 <button class="lang-switcher-btn"><img class="lang-switcher-img" src="./assets/images/en.svg" alt="lang" /></button>
             </header>
             <div class="welcome__message">
@@ -260,12 +264,52 @@
     </section>
     <section class="footer" id="contacts">
         <div class="footer__wrapper">
+            <h3 class="footer__title lang">PLACÓWKI</h3>
+            <div class="footer__sites">
+                <div class="footer__site">
+                    <div class="footer__site_texts">
+                        <p class="footer__site_title">SIMPLE Barbershop</p>
+                        <p class="footer__site_address">ul. Bukowska 78</p>
+                    </div>
+                    <div class="footer__map-container">
+                        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2433.8439710850994!2d16.88505231580336!3d52.40950397979346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4704452d7295cfaf%3A0x433fc023d049866d!2sSIMPLE%20Barbershop!5e0!3m2!1sru!2spl!4v1645479330364!5m2!1sru!2spl" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <a class="footer__site_button lang" href="https://simplebarber.booksy.com/">Zarezerwuj online</a>
+                    <a class="footer__phone-link" href="tel:+48786677659">
+                        +48 786 677 659
+                    </a>
+                    <a class="footer__booksy-link" href="https://simplebarber.booksy.com/">
+                        <img alt="booksy" src="assets/images/booksy.svg" />
+                        <img alt="booksy rank" src="assets/images/bukowska-rank.svg" />
+                    </a>
+                </div>
+                <div class="footer__site">
+                    <div class="footer__site_texts">
+                        <p class="footer__site_title">SIMPLE Barbershop & Academy</p>
+                        <p class="footer__site_address">ul. Świerzawska 4</p>
+                    </div>
+                    <div class="footer__map-container">
+                        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2434.1726717255287!2d16.861291299999998!3d52.4035467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4704452762247389%3A0xb2a426a74db81f52!2sSIMPLE%20Barbershop%20-%20Marcelin!5e0!3m2!1sru!2spl!4v1693049030387!5m2!1sru!2spl" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <a class="footer__site_button lang" href="https://simplebarber2.booksy.com/">Zarezerwuj online</a>
+                    <a class="footer__phone-link" href="tel:+48512184961">
+                        +48 512 184 961
+                    </a>
+                    <a class="footer__booksy-link" href="https://simplebarber.booksy.com/">
+                        <img alt="booksy" src="assets/images/booksy.svg" />
+                        <img alt="booksy rank" src="assets/images/bukowska-rank.svg" />
+                    </a>
+                </div>
+            </div>
             <div class="contacts">
-                <div class="contacts__title lang">Kontakt</div>
                 <ul class="contacts__list">
                     <li class="contacts__item">
-                        <i class="contacts__icon bi bi-telephone"></i>
-                        <a class="contacts__value" href="tel: +48786677659">+48 786-677-659</a>
+                        <i class="contacts__icon bi bi-geo-alt"></i>
+                        <p class="contacts__value lang">Poznań, ul. Bukowska 78</p>
+                    </li>
+                    <li class="contacts__item">
+                        <i class="contacts__icon bi bi-geo-alt"></i>
+                        <p class="contacts__value lang">Poznań, ul. Świerzawska 4</p>
                     </li>
                     <li class="contacts__item">
                         <i class="contacts__icon bi bi-envelope"></i>
@@ -275,21 +319,16 @@
                         <i class="contacts__icon bi bi-clock"></i>
                         <p class="contacts__value lang">Pn - Ndz: 9:00 - 21:00</p>
                     </li>
-                    <li class="contacts__item">
-                        <i class="contacts__icon bi bi-geo-alt"></i>
-                        <p class="contacts__value lang">Poznań, ul. Bukowska 78</p>
-                    </li>
                 </ul>
-                <ul class="footer__links">
-                    <li><a target="_blank" href="https://www.instagram.com/simple_barbershop_poznan/"><img class="footer__link-icon" src="./assets/images/instagram.svg"></a></li>
-                    <li><a target="_blank" href="https://www.facebook.com/simplebarberpoz/?ref=pages_you_manage"><img class="footer__link-icon" src="./assets/images/facebook.svg"></a></li>
-                    <li><a target="_blank" href="http://www.tiktok.com/@simple_barbershop_poznan"><img class="footer__link-icon" src="./assets/images/tiktok.svg"></a></li>
-                    <li><a target="_blank" href="https://t.me/simplebarbershop"><img class="footer__link-icon" src="./assets/images/telegram.svg"></a></li>
-                    <li><a target="_blank" href="https://wa.me/48786677659"><img class="footer__link-icon" src="./assets/images/whatsapp.svg"></a></li>
-                </ul>
-            </div>
-            <div class="footer__map-container">
-                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2433.8439710850994!2d16.88505231580336!3d52.40950397979346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4704452d7295cfaf%3A0x433fc023d049866d!2sSIMPLE%20Barbershop!5e0!3m2!1sru!2spl!4v1645479330364!5m2!1sru!2spl" allowfullscreen="" loading="lazy"></iframe>
+                <div class="footer__links-container">
+                    <ul class="footer__links">
+                        <li><a target="_blank" href="https://www.instagram.com/simple_barbershop_poznan/"><img class="footer__link-icon" src="./assets/images/instagram.svg"></a></li>
+                        <li><a target="_blank" href="https://www.facebook.com/simplebarberpoz/?ref=pages_you_manage"><img class="footer__link-icon" src="./assets/images/facebook.svg"></a></li>
+                        <li><a target="_blank" href="https://t.me/simplebarbershop"><img class="footer__link-icon" src="./assets/images/telegram.svg"></a></li>
+                        <li><a target="_blank" href="https://wa.me/48786677659"><img class="footer__link-icon" src="./assets/images/whatsapp.svg"></a></li>
+                    </ul>
+                    <a href="\" class="footer__logo"><img src="assets/images/Logo.svg" /></a>
+                </div>
             </div>
         </div>
     </section>
@@ -309,7 +348,6 @@
             <ul class="menu-overlay__links">
                 <li><a target="_blank" href="https://www.instagram.com/simple_barbershop_poznan/"><img class="menu-overlay__link-icon" src="./assets/images/instagram-white.svg"></a></li>
                 <li><a target="_blank" href="https://www.facebook.com/simplebarberpoz/?ref=pages_you_manage"><img class="menu-overlay__link-icon" src="./assets/images/facebook-white.svg"></a></li>
-                <li><a target="_blank" href="http://www.tiktok.com/@simple_barbershop_poznan"><img class="menu-overlay__link-icon" src="./assets/images/tiktok-white.svg"></a></li>
                 <li><a target="_blank" href="https://t.me/simplebarbershop"><img class="menu-overlay__link-icon" src="./assets/images/telegram-white.svg"></a></li>
                 <li><a target="_blank" href="https://wa.me/48786677659"><img class="menu-overlay__link-icon" src="./assets/images/whatsapp-white.svg"></a></li>
             </ul>
@@ -387,7 +425,8 @@
             <i class="bi bi-telephone"></i>
         </div>
     </a>
-    <script type="text/javascript" src="https://booksy.com/widget/code.js?id=126679&country=pl&lang=pl"></script>
+    <a class="book-link lang" target="_blank" href="https://booksy.com/pl-pl/instant-experiences/widget/126679,204346">Rezerwacja</a> 
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="./script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.4/dist/js/splide.min.js"></script>

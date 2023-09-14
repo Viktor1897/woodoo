@@ -123,7 +123,6 @@ document.addEventListener( 'DOMContentLoaded', function () {
     modalSplide.mount();
   });
 
-document.querySelector('.booksy-widget-button').textContent = 'Rezerwacja';
 
 const translationPL = ['Usługi', 'Galeria', 'Akademia', 'Kontakt', 'Najlepszy fryzjer męski w Poznaniu', 
 'Zapomnij na zawsze o problemach z włosami, teraz to jest nasza troska. Twoje włosy i broda  będą wyglądały perfekcyjnie', 
@@ -135,8 +134,8 @@ const translationPL = ['Usługi', 'Galeria', 'Akademia', 'Kontakt', 'Najlepszy f
 'Strzyżenie (TOP BARBER)', 'Strzyżenie', 'Strzyżenie Brody', 'Strzyżenie dziecięce (do 12 lat)', 'Strzyżenie maszynką (1 nakładka)', 
 'Strzyżenie + broda', 'Strzyżenie tata + syn', 'Odsiwianie włosów', 'Odsiwianie brody', 'Woskowanie (jedna strefa)', 
 'Oczyszczanie twarzy (czarna maska)', 'UkłAdanie włosów', 'Płatki pod oczy', 'Koloryzacja włosów', 'Galeria', 'Więcej zdjęć na instagramie', 
-'Zostań profesjonalnym Barberem. Dzięki naszej akademii', 'Więcej info na stronie simple academy', 'Kontakt', 'Pn - Ndz: 9:00 - 21:00', 
-'Poznań, ul. Bukowska 78', 'O nas', 'Usługi', 'Galeria', 'Kontakt'];
+'Zostań profesjonalnym Barberem. Dzięki naszej akademii', 'Więcej info na stronie simple academy', 'PLACÓWKI', 'Zarezerwuj online', 'Zarezerwuj online',
+'Poznań, ul. Bukowska 78', 'Poznań, ul. Świerzawska 4', 'Pn - Ndz: 9:00 - 21:00', 'Usługi', 'Galeria', 'Akademia', 'Kontakt', 'Rezerwacja'];
 
 const translationEN = ['Services', 'Gallery', 'Academy', 'Contact', 
 'THE BEST BARBERSHOP IN POZNAN', 'Forget about hair problems, it’s our duty from now. We are dedicated to make your hair and beard look great.',
@@ -148,7 +147,7 @@ const translationEN = ['Services', 'Gallery', 'Academy', 'Contact',
 'Services', 'Haircut (TOP BARBER)', 'Haircut', 'Beard trim', 'Kids HAIRCUT UP TO 12 YEARS', 'CLIPPER HAIRCUT (1 ATTACHABLE GUARD)', 'Haircut + beard', 
 'Haircut Man + Children', 'GRAY HAIR CAMO', 'GRAY BEARD CAMO', 'WAXING SERVICE (ONE ZONE)', 'BLACK MASK', 'styling', 'patches', 'hair coloring ', 'Gallery', 'MORE PHOTOS ON INSTAGRAM',
 'BECOME A PROFESSIONAL BARBER. THANKS TO OUR ACADEMY', 'More information on the simple academy website',
-'Contacts', 'Mon - Sun: 9:00 - 21:00', 'Poznan, Bukowska 78 st.', 'About', 'Services', 'Gallery', 'Contact']
+'SITES', 'Book online', 'Book online', 'Poznan, Bukowska 78 st.', 'Poznan, Swierzawska 4 st.', 'Mon - Sun: 9:00 - 21:00', 'Services', 'Gallery', 'Academy', 'Contact', 'Book online'];
 
 let lang = 'pl';
 
@@ -160,11 +159,9 @@ switchLangBtns.forEach(btn => btn.addEventListener('click', changeLanguage));
 function changeLanguage() {
   if (lang === 'pl') {
     Array.from(document.querySelectorAll('.lang')).map((item, i) => item.textContent = translationEN[i]);
-    document.querySelector('.booksy-widget-button').textContent = 'Book online';
     lang = 'en';
   } else {
     Array.from(document.querySelectorAll('.lang')).map((item, i) => item.textContent = translationPL[i]);
-    document.querySelector('.booksy-widget-button').textContent = 'Rezerwacja';
     lang = 'pl';
   }
   langIcons.forEach(icon => icon.src = `./assets/images/${lang === 'en' ? 'pl' : 'en'}.svg`);
