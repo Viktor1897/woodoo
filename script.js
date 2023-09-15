@@ -134,7 +134,7 @@ const translationPL = ['Usługi', 'Galeria', 'Akademia', 'Kontakt', 'Najlepszy f
 'Strzyżenie (TOP BARBER)', 'Strzyżenie', 'Strzyżenie Brody', 'Strzyżenie dziecięce (do 12 lat)', 'Strzyżenie maszynką (1 nakładka)', 
 'Strzyżenie + broda', 'Strzyżenie tata + syn', 'Odsiwianie włosów', 'Odsiwianie brody', 'Woskowanie (jedna strefa)', 
 'Oczyszczanie twarzy (czarna maska)', 'UkłAdanie włosów', 'Płatki pod oczy', 'Koloryzacja włosów', 'Galeria', 'Więcej zdjęć na instagramie', 
-'Zostań profesjonalnym Barberem. Dzięki naszej akademii', 'Więcej info na stronie simple academy', 'PLACÓWKI', 'Zarezerwuj online', 'Zarezerwuj online',
+'Zostań profesjonalnym Barberem. Dzięki naszej akademii', 'Więcej info na stronie SIMPLE Academy', 'PLACÓWKI', 'Zarezerwuj online', 'Zarezerwuj online',
 'Poznań, ul. Bukowska 78', 'Poznań, ul. Świerzawska 4', 'Pn - Ndz: 9:00 - 21:00', 'Usługi', 'Galeria', 'Akademia', 'Kontakt', 'Rezerwacja'];
 
 const translationEN = ['Services', 'Gallery', 'Academy', 'Contact', 
@@ -146,7 +146,7 @@ const translationEN = ['Services', 'Gallery', 'Academy', 'Contact',
 'We don\'t separate people. Therefore, both student and businessman feel comfortable with us. It is your decision to trust us, the rest falls on our shoulders. We ensure that your hair is in a good hands.',
 'Services', 'Haircut (TOP BARBER)', 'Haircut', 'Beard trim', 'Kids HAIRCUT UP TO 12 YEARS', 'CLIPPER HAIRCUT (1 ATTACHABLE GUARD)', 'Haircut + beard', 
 'Haircut Man + Children', 'GRAY HAIR CAMO', 'GRAY BEARD CAMO', 'WAXING SERVICE (ONE ZONE)', 'BLACK MASK', 'styling', 'patches', 'hair coloring ', 'Gallery', 'MORE PHOTOS ON INSTAGRAM',
-'BECOME A PROFESSIONAL BARBER. THANKS TO OUR ACADEMY', 'More information on the simple academy website',
+'BECOME A PROFESSIONAL BARBER. THANKS TO OUR ACADEMY', 'More information on the SIMPLE Academy website',
 'SITES', 'Book online', 'Book online', 'Poznan, Bukowska 78 st.', 'Poznan, Swierzawska 4 st.', 'Mon - Sun: 9:00 - 21:00', 'Services', 'Gallery', 'Academy', 'Contact', 'Book online'];
 
 let lang = 'pl';
