@@ -454,7 +454,7 @@ tbody {
 .academy__text {
     margin-top: 9rem;
     font-size: 2.5rem;
-    font-weight: 600;
+    font-weight: 400;
     text-align: center;
 }
 .academy__image {
@@ -504,6 +504,9 @@ tbody {
     font-weight: 700;
     margin-bottom: 0.3rem;
 }
+.footer__site_address {
+    font-weight: 300;
+}
 .footer__title {
     color: #FFFFFF;
     margin-bottom: 7rem;
@@ -513,14 +516,17 @@ tbody {
     gap: 1.5rem;
     cursor: pointer;
 }
+.footer__booksy-rank-img {
+    width: 46px;
+    height: 34px;
+}
 .contacts {
     max-width: 115rem;
     width: 100%;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    row-gap: 4rem;
 }
 .contacts__title {
     font-family: 'Montserrat', sans-serif;
@@ -553,19 +559,12 @@ tbody {
 }
 .footer__links-container {
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 3rem;
 }
 .footer__links {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 4rem;
-}
-.footer__logo {
-    filter: invert(0.4);
+    gap: 5rem;
 }
 .footer__map-container {
     display: flex;
@@ -709,6 +708,10 @@ tbody {
     .gallery__image_extra {
         display: block;
     }
+
+    .contacts {
+        flex-direction: column;
+    }
 }
 
 @media screen and (max-width: 800px) {
@@ -749,9 +752,6 @@ tbody {
     }
     .mobile-header {
         display: flex;
-    }
-    .footer__links {
-        gap: 2rem;
     }
     
     .gallery__wrapper {
