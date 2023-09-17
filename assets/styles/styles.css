@@ -526,7 +526,7 @@ tbody {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    row-gap: 4rem;
+    gap: 4rem;
 }
 .contacts__title {
     font-family: 'Montserrat', sans-serif;
@@ -564,7 +564,7 @@ tbody {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 5rem;
+    gap: 4.3rem;
 }
 .footer__map-container {
     display: flex;
@@ -848,9 +848,6 @@ tbody {
     }
     .footer__wrapper {
         margin: 4rem auto;
-    }
-    .contacts {
-        gap: 4rem;
     }
     .contacts__list {
         gap: 2rem;
