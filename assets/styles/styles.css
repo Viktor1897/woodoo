@@ -16,6 +16,34 @@ body {
 a {
     text-decoration: none;
 }
+
+/*
+Booksy widget
+*/
+.booksy-business-link {
+    display: none!important;
+}
+.booksy-widget-container {
+    width: 100%!important;
+}
+.booksy-widget-button {
+    display: flex!important;
+    justify-content: center;
+    align-items: center;
+    height: 6.5rem!important;
+    width: 100%!important;
+    border-radius: 1rem!important;
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    background-color: #FFFFFF!important;
+    background-image: none!important;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+    transition: 0.5s;
+}
+
 .header__media-links {
     display: flex;
 }
@@ -42,7 +70,6 @@ a {
 .welcome__button,
 .gallery__button,
 .academy__button,
-.footer__site_button,
 .footer__phone-link {
     display: flex;
     justify-content: center;
@@ -72,14 +99,6 @@ a {
 }
 .academy__button {
     margin-top: 4rem;
-}
-
-.footer__site_button {
-    margin-top: 0;
-    height: 6.5rem;
-    width: 100%;
-    background-color: #FFFFFF;
-    color: #000000;
 }
 
 .footer__phone-link {
@@ -579,13 +598,14 @@ tbody {
 }
 /* Edge section */
 .edge {
+    padding: 4rem 0;
     background-color: #000000;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 .edge__text {
-    margin: 4rem auto;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 1.6rem;
@@ -735,8 +755,8 @@ tbody {
     .about-us__image-container {
         width: 80%;
     }
-    .edge__text {
-        margin: 3rem auto;
+    .edge {
+        padding: 3rem 0;
     }
 
     .welcome__image-container {
@@ -852,8 +872,8 @@ tbody {
     .contacts__list {
         gap: 2rem;
     }
-    .edge__text {
-        margin: 2.5rem auto;
+    .edge {
+        padding: 2.5rem 0;
     }
 }
 
