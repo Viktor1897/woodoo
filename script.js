@@ -137,7 +137,7 @@ const translationPL = ['Usługi', 'Galeria', 'Akademia', 'Kontakt', 'Najlepszy f
 'Strzyżenie + broda', 'Strzyżenie tata + syn', 'Odsiwianie włosów', 'Odsiwianie brody', 'Woskowanie (jedna strefa)', 
 'Oczyszczanie twarzy (czarna maska)', 'UkłAdanie włosów', 'Płatki pod oczy', 'Koloryzacja włosów', 'Galeria', 'Więcej zdjęć na instagramie', 
 'Zostań profesjonalnym Barberem. Dzięki naszej akademii', 'Więcej info na stronie SIMPLE Academy', 'PLACÓWKI',
-'Poznań, ul. Bukowska 78', 'Poznań, ul. Świerzawska 4', 'Pn - Ndz: 9:00 - 21:00', 'Usługi', 'Galeria', 'Akademia', 'Kontakt', 'Rezerwacja'];
+'Poznań, ul. Bukowska 78', 'Poznań, ul. Świerzawska 4', 'Pn - Ndz: 9:00 - 21:00', 'Usługi', 'Galeria', 'Akademia', 'Kontakt'];
 
 const translationEN = ['Services', 'Gallery', 'Academy', 'Contact', 
 'THE BEST BARBERSHOP IN POZNAN', 'Forget about hair problems, it’s our duty from now. We are dedicated to make your hair and beard look great.',
@@ -149,7 +149,7 @@ const translationEN = ['Services', 'Gallery', 'Academy', 'Contact',
 'Services', 'Haircut (TOP BARBER)', 'Haircut', 'Beard trim', 'Kids HAIRCUT UP TO 12 YEARS', 'CLIPPER HAIRCUT (1 ATTACHABLE GUARD)', 'Haircut + beard', 
 'Haircut Man + Children', 'GRAY HAIR CAMO', 'GRAY BEARD CAMO', 'WAXING SERVICE (ONE ZONE)', 'BLACK MASK', 'styling', 'patches', 'hair coloring ', 'Gallery', 'MORE PHOTOS ON INSTAGRAM',
 'BECOME A PROFESSIONAL BARBER. THANKS TO OUR ACADEMY', 'More information on the SIMPLE Academy website',
-'SITES', 'Poznan, Bukowska 78 st.', 'Poznan, Swierzawska 4 st.', 'Mon - Sun: 9:00 - 21:00', 'Services', 'Gallery', 'Academy', 'Contact', 'Book online'];
+'Location', 'Poznan, Bukowska 78 st.', 'Poznan, Swierzawska 4 st.', 'Mon - Sun: 9:00 - 21:00', 'Services', 'Gallery', 'Academy', 'Contact'];
 
 let lang = 'pl';
 
