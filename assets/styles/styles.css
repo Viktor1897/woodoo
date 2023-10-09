@@ -613,6 +613,35 @@ tbody {
     color: #FFFFFF;
 }
 
+/*BOOKSY WIDGET*/
+
+.book-link {
+    position: fixed;
+    bottom: 0;
+    right: -1rem;
+    background: linear-gradient(315deg, #000000 90%, #00000000 90%);
+    width: 7rem;
+    height: 25rem;
+    color: #FFFFFF;
+    font-size: 20px;
+    display: flex!important;
+    align-items: center;
+    justify-content: center;
+    writing-mode:vertical-rl;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    animation: shadow-anm 1.2s infinite ease-in-out;
+    transition: all 0.5s;
+    z-index: 5;
+}
+
+.book-link:hover {
+    animation: none;
+    right: 0;
+    background: linear-gradient(315deg, var(--accent-color) 90%, #00000000 90%);
+}
+
 @keyframes shadow-anm {
     from {
         filter: drop-shadow(#000000 0 0 5px);
