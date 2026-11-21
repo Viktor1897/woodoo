@@ -1,0 +1,30 @@
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  [data-motion="enter"] {
+    animation: rise-in var(--motion-enter) var(--motion-ease)
+      var(--motion-delay, 0ms) backwards;
+  }
+
+  @supports (animation-timeline: view()) {
+    [data-motion="reveal"]:not(:focus-within) {
+      animation: rise-in linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 85%;
+    }
+  }
+
+  @keyframes rise-in {
+    from {
+      transform: translateY(var(--motion-distance));
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}

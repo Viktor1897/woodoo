@@ -14,8 +14,10 @@
   inline-size: min(var(--column-min), calc(100% - 2 * var(--container-gutter)));
   margin: 0;
   padding: var(--space-4);
-  border: var(--border-width) solid var(--color-action);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-surface);
   background: var(--color-surface);
+  box-shadow: var(--shadow-float);
 }
 
 .siteMenu a {
@@ -23,11 +25,10 @@
   align-items: center;
   min-block-size: var(--target-size);
   padding-inline: var(--space-3);
-  border-block-end: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-field);
   color: var(--color-text);
   font-weight: var(--weight-heading);
   text-decoration: none;
-  text-transform: uppercase;
 }
 
 .siteMenu a:hover {
@@ -43,12 +44,21 @@
 .serviceCategories {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-2);
+  padding: var(--space-2);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-surface);
+  background: color-mix(in srgb, var(--color-inverse-text) 7%, var(--color-inverse));
 }
 
 .serviceCategories > button {
   min-block-size: calc(var(--target-size) + var(--space-2));
   padding-inline: var(--space-3);
   font-size: var(--text-body);
+}
+
+.serviceCategories > button[data-variant="secondary"]:not(:hover) {
+  border-color: transparent;
 }
 
 .serviceHeader {
@@ -66,14 +76,14 @@
 .serviceList {
   margin: 0;
   padding: 0;
-  border-block-start: var(--focus-width) solid var(--color-accent);
+  border-block-start: var(--border-width) solid var(--color-border);
   list-style: none;
 }
 
 .serviceRow {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
-  align-items: start;
+  align-items: center;
   gap: var(--space-3);
   padding-block: var(--space-3);
   border-block-end: var(--border-width) solid var(--color-border);
@@ -86,6 +96,9 @@
 }
 
 .price {
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-control);
+  background: color-mix(in srgb, var(--color-inverse-text) 12%, var(--color-inverse));
   font-variant-numeric: tabular-nums;
   font-weight: var(--weight-semibold);
   white-space: nowrap;
@@ -114,7 +127,7 @@
   inline-size: 100%;
   padding: var(--space-2) var(--space-4);
   border: var(--border-width) solid var(--color-border-control);
-  border-radius: var(--radius-control);
+  border-radius: var(--radius-field);
   background: var(--color-surface);
   color: var(--color-text);
   font: inherit;
@@ -131,16 +144,22 @@
 .locationList {
   margin: 0;
   padding: 0;
-  border-block-start: var(--border-width) solid var(--color-border);
   list-style: none;
+}
+
+.locationList:not([hidden]) {
+  display: grid;
+  gap: var(--space-3);
 }
 
 .locationRow {
   display: grid;
   align-items: center;
   gap: var(--space-3) var(--space-6);
-  padding-block: var(--space-6);
-  border-block-end: var(--border-width) solid var(--color-border);
+  padding: var(--space-6);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-surface);
+  background: var(--color-surface);
 }
 
 .locationRow address,
@@ -162,7 +181,11 @@
 
 .mapLayout {
   display: grid;
+  overflow: hidden;
   border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-feature);
+  background: var(--color-section-muted);
+  box-shadow: var(--shadow-surface);
 }
 
 .mapSidebar {
@@ -187,6 +210,20 @@
   inline-size: 100%;
   block-size: var(--column-min);
   border: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .siteMenu:popover-open,
+  .serviceList:not([hidden]),
+  .locationList:not([hidden]),
+  .mapLayout {
+    animation: panel-in var(--motion-fast) var(--motion-ease);
+  }
+
+  @keyframes panel-in {
+    from { opacity: 0.6; transform: translateY(var(--space-2)); }
+    to { opacity: 1; transform: translateY(0); }
+  }
 }
 
 @media (min-width: 48rem) {

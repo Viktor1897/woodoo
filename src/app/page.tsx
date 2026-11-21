@@ -38,23 +38,28 @@ export default function Home() {
         <Section className={styles.hero} aria-labelledby="hero-title">
           <div className={styles.heroFrame}>
             <div className={styles.heroIntro}>
-              <p className={styles.eyebrow}>Barbershop w Poznaniu</p>
-              <Heading as="h1" size="display" id="hero-title">
+              <p className={styles.eyebrow} data-motion="enter">Barbershop w Poznaniu</p>
+              <Heading as="h1" size="display" id="hero-title" data-motion="enter">
                 SIMPLE
               </Heading>
-              <p className={styles.heroTagline}>Dobre cięcie. <span className={styles.heroAccent}>Po prostu.</span></p>
+              <p className={styles.heroTagline} data-motion="enter">
+                Dobre cięcie. <span className={styles.heroAccent}>Po prostu.</span>
+              </p>
+              <ActionGroup className={styles.heroActions} data-motion="enter">
+                <ButtonLink href="#lokalizacje" variant="accent">Wybierz salon</ButtonLink>
+                <ButtonLink href="#uslugi" variant="secondary">Zobacz usługi</ButtonLink>
+              </ActionGroup>
             </div>
           </div>
         </Section>
 
         <Section className={styles.bookingBandSection} aria-labelledby="choose-salon-title">
           <div className={styles.bookingBand}>
-            <div className={styles.bookingBandContent}>
+            <div className={styles.bookingBandContent} data-motion="reveal">
               <Heading id="choose-salon-title">Wybierz salon i zarezerwuj</Heading>
               <p>Strzyżenie męskie i pielęgnacja brody w trzech poznańskich salonach.</p>
               <ActionGroup>
-                <ButtonLink href="#lokalizacje" variant="accent">Wybierz salon</ButtonLink>
-                <ButtonLink href="#uslugi" variant="secondary">Zobacz usługi</ButtonLink>
+                <ButtonLink href={bookingUrl}>Zarezerwuj w Booksy</ButtonLink>
               </ActionGroup>
             </div>
             <div className={styles.bookingBandMedia}>
@@ -69,7 +74,7 @@ export default function Home() {
         </Section>
 
         <Section tone="inverse" className={styles.featureSection} id="uslugi" aria-labelledby="services-title">
-          <div className={styles.sectionIntro}>
+          <div className={styles.sectionIntro} data-motion="reveal">
             <Heading size="display" id="services-title">Usługi i cennik</Heading>
             <p>Przykładowe ceny. Aktualny cennik i dostępność sprawdzisz w Booksy po wyborze salonu.</p>
           </div>
@@ -77,7 +82,7 @@ export default function Home() {
         </Section>
 
         <Section className={styles.featureSection} id="lokalizacje" aria-labelledby="locations-title">
-          <div className={styles.sectionIntro}>
+          <div className={styles.sectionIntro} data-motion="reveal">
             <Heading size="display" id="locations-title">Salony SIMPLE</Heading>
             <p>Znajdź dogodny adres w Poznaniu i zarezerwuj wizytę w wybranym salonie.</p>
           </div>
@@ -85,11 +90,15 @@ export default function Home() {
         </Section>
 
         <Section tone="muted" id="galeria" aria-labelledby="gallery-title">
-          <div className={styles.sectionIntro}>
+          <div className={styles.sectionIntro} data-motion="reveal">
             <Heading id="gallery-title">Z fotela barbera</Heading>
           </div>
           <Grid className={styles.gallery}>
-            {gallery.map(({ alt, ...photo }) => <Image key={photo.src} alt={alt} {...photo} />)}
+            {gallery.map(({ alt, ...photo }) => (
+              <div key={photo.src} className={styles.galleryPhoto} data-motion="reveal">
+                <Image alt={alt} {...photo} />
+              </div>
+            ))}
           </Grid>
           <div className={styles.galleryAction}>
             <ButtonLink href={instagramUrl} variant="secondary">Więcej na Instagramie</ButtonLink>
@@ -107,7 +116,7 @@ export default function Home() {
               />
               <figcaption>Praktyka w SIMPLE Academy w Poznaniu</figcaption>
             </figure>
-            <div className={styles.intro}>
+            <div className={styles.intro} data-motion="reveal">
               <p className={styles.eyebrow}>Szkolenia barberskie w Poznaniu</p>
               <Heading id="academy-title">SIMPLE Academy</Heading>
               <dl className={styles.courses}>
@@ -127,7 +136,7 @@ export default function Home() {
 
         <Section tone="muted" id="pierwsza-wizyta" aria-labelledby="visit-title">
           <div className={styles.sectionLayout}>
-            <div className={styles.sectionIntro}>
+            <div className={styles.sectionIntro} data-motion="reveal">
               <Heading id="visit-title">Pierwsza wizyta</Heading>
               <p>Jak wybrać usługę i zaplanować wizytę w SIMPLE.</p>
             </div>

@@ -26,7 +26,7 @@ export default function DesignSystemPreview() {
       <Section tone="muted" id="blocks" aria-labelledby="blocks-title">
         <div className={styles.flow}>
           <Heading id="blocks-title">Sections and blocks</Heading>
-          <Grid>
+          <Grid data-motion="reveal">
             <Card>
               <Heading as="h3" size="title">Services</Heading>
               <p>Layout for a service description, duration, and price.</p>

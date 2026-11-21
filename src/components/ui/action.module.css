@@ -16,10 +16,8 @@
   font-size: var(--text-control);
   font-weight: var(--weight-heading);
   line-height: 1;
-  letter-spacing: var(--tracking-control);
   text-align: center;
   text-decoration: none;
-  text-transform: uppercase;
   overflow-wrap: anywhere;
   cursor: pointer;
 }
@@ -44,4 +42,24 @@
 .action:disabled {
   cursor: not-allowed;
   opacity: var(--disabled-opacity);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .action {
+    transition:
+      background-color var(--motion-fast) var(--motion-ease),
+      border-color var(--motion-fast) var(--motion-ease),
+      color var(--motion-fast) var(--motion-ease),
+      transform var(--motion-fast) var(--motion-ease);
+  }
+
+  @media (hover: hover) {
+    .action:hover:not(:disabled) {
+      transform: translateY(-2px);
+    }
+  }
+
+  .action:active:not(:disabled) {
+    transform: scale(0.98);
+  }
 }

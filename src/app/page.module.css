@@ -20,7 +20,7 @@
 }
 
 .header {
-  padding-block: var(--space-4);
+  padding-block: var(--space-3);
 }
 
 .headerInner {
@@ -56,30 +56,68 @@
 }
 
 .heroFrame {
-  --hero-scrim: color-mix(in srgb, var(--color-inverse) 68%, transparent);
-
+  position: relative;
+  isolation: isolate;
   display: grid;
-  place-items: center;
-  min-block-size: clamp(25rem, 75svh, 52rem);
-  border: var(--border-width) solid var(--color-action);
-  background:
-    linear-gradient(var(--hero-scrim), var(--hero-scrim)),
-    url("/assets/images/home/academy-training.webp") center 42% / cover no-repeat
-    var(--color-inverse);
+  align-items: end;
+  min-block-size: clamp(29rem, 73svh, 51rem);
+  overflow: hidden;
+  border-radius: var(--radius-feature);
+  background: var(--color-inverse);
+  box-shadow: var(--shadow-surface);
   color: var(--color-inverse-text);
+}
+
+.heroFrame::before,
+.heroFrame::after {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  content: "";
+}
+
+.heroFrame::before {
+  background: url("/assets/images/home/academy-training.webp") center 41% / cover no-repeat;
+}
+
+.heroFrame::after {
+  background:
+    linear-gradient(
+      0deg,
+      color-mix(in srgb, var(--color-inverse) 95%, transparent),
+      color-mix(in srgb, var(--color-inverse) 74%, transparent) 40%,
+      transparent 88%
+    ),
+    linear-gradient(90deg, color-mix(in srgb, var(--color-inverse) 42%, transparent), transparent 68%);
 }
 
 .heroIntro {
   display: grid;
-  justify-items: center;
-  gap: var(--space-6);
-  padding: clamp(var(--space-8), 5vw, var(--section-space)) var(--space-4);
-  text-align: center;
+  justify-items: start;
+  gap: var(--space-4);
+  padding: clamp(var(--space-6), 5vw, var(--section-space));
   --text-display: var(--text-brand);
+  --color-focus: var(--color-inverse-text);
 }
 
 .heroIntro .eyebrow {
   color: inherit;
+}
+
+.heroIntro > :nth-child(2) {
+  --motion-delay: var(--motion-stagger);
+}
+
+.heroIntro > :nth-child(3) {
+  --motion-delay: calc(2 * var(--motion-stagger));
+}
+
+.heroActions {
+  margin-block-start: var(--space-2);
+  --color-action: var(--color-inverse-text);
+  --color-action-hover: var(--color-inverse-action-hover);
+  --color-on-action: var(--color-inverse);
+  --motion-delay: calc(3 * var(--motion-stagger));
 }
 
 .heroTagline {
@@ -88,13 +126,10 @@
   font-size: var(--text-title);
   font-weight: var(--weight-heading);
   line-height: var(--leading-heading);
-  text-transform: uppercase;
 }
 
 .heroAccent {
-  padding-inline: var(--space-2);
-  background: var(--color-accent);
-  color: var(--color-on-accent);
+  color: var(--color-accent);
   white-space: nowrap;
 }
 
@@ -104,6 +139,8 @@
 
 .bookingBand {
   display: grid;
+  overflow: hidden;
+  border-radius: var(--radius-feature);
   background: var(--color-action);
   color: var(--color-on-action);
 }
@@ -129,6 +166,9 @@
 .bookingBandMedia {
   position: relative;
   min-block-size: var(--column-min);
+  margin: var(--space-3);
+  overflow: hidden;
+  border-radius: var(--radius-surface);
 }
 
 .bookingBandMedia img {
@@ -145,6 +185,8 @@
 }
 
 .featureSection[data-tone="inverse"] {
+  margin-inline: var(--container-gutter);
+  border-radius: var(--radius-feature);
   --color-text-muted: var(--color-inverse-action-hover);
   --color-border: var(--color-inverse-border);
 }
@@ -244,17 +286,26 @@
   object-fit: cover;
 }
 
+.galleryPhoto {
+  overflow: hidden;
+  border-radius: var(--radius-surface);
+}
+
 .galleryAction {
   margin-block-start: var(--space-6);
 }
 
 .questions {
-  border-block-start: var(--border-width) solid var(--color-border);
+  display: grid;
+  align-content: start;
+  gap: var(--space-3);
 }
 
 .questions details {
-  padding-block: var(--space-4);
-  border-block-end: var(--border-width) solid var(--color-border);
+  padding: var(--space-4) var(--space-6);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-field);
+  background: var(--color-surface);
 }
 
 .questions summary {
@@ -318,6 +369,38 @@
   padding-block-start: var(--space-4);
   border-block-start: var(--border-width) solid var(--color-border);
   font-size: var(--text-small);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .heroFrame::before {
+    animation: settle-photo calc(2 * var(--motion-enter)) var(--motion-ease) backwards;
+  }
+
+  .questions details[open] p {
+    animation: answer-in var(--motion-fast) var(--motion-ease);
+  }
+
+  @media (hover: hover) {
+    .galleryPhoto img,
+    .bookingBandMedia img {
+      transition: transform var(--motion-enter) var(--motion-ease);
+    }
+
+    .galleryPhoto:hover img,
+    .bookingBandMedia:hover img {
+      transform: scale(1.055);
+    }
+  }
+
+  @keyframes settle-photo {
+    from { transform: scale(1.06); }
+    to { transform: scale(1); }
+  }
+
+  @keyframes answer-in {
+    from { opacity: 0; transform: translateY(var(--space-2)); }
+    to { opacity: 1; transform: translateY(0); }
+  }
 }
 
 @media (min-width: 48rem) {

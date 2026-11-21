@@ -6,7 +6,6 @@
   line-height: var(--leading-heading);
   letter-spacing: var(--tracking-heading);
   text-wrap: balance;
-  text-transform: uppercase;
   overflow-wrap: anywhere;
 }
 

@@ -28,15 +28,15 @@
   --text-title: clamp(1.5rem, 1.3rem + 1vw, 2.125rem);
   --text-section: clamp(2rem, 1.5rem + 2vw, 3.25rem);
   --text-display: clamp(2.25rem, 1.55rem + 3.1vw, 4.25rem);
-  --text-brand: clamp(4.375rem, 2rem + 10.8vw, 12rem);
-  --text-feature: clamp(2.5rem, 1.1rem + 5.2vw, 6.25rem);
+  --text-brand: clamp(3.4rem, 2rem + 9.8vw, 10.75rem);
+  --text-feature: clamp(2.5rem, 1.35rem + 3.6vw, 5rem);
   --weight-semibold: 600;
   --weight-heading: 700;
   --leading-body: 1.6;
   --leading-heading: 1.14;
   --leading-display: 1.08;
-  --tracking-heading: -0.005em;
-  --tracking-display: -0.01em;
+  --tracking-heading: -0.035em;
+  --tracking-display: -0.065em;
   --tracking-control: 0.04em;
 
   --space-2: 0.5rem;
@@ -52,11 +52,21 @@
   --measure: 60ch;
   --column-min: 17rem;
 
-  --radius-control: 0;
-  --radius-surface: 0;
+  --radius-control: 999px;
+  --radius-field: 0.875rem;
+  --radius-surface: 1.25rem;
+  --radius-feature: clamp(1.5rem, 1rem + 1.65vw, 2.5rem);
+  --shadow-surface: 0 1rem 3rem rgb(43 42 40 / 9%);
+  --shadow-float: 0 1.25rem 3.5rem rgb(43 42 40 / 19%);
   --border-width: 1px;
   --focus-width: 2px;
   --focus-offset: 3px;
   --target-size: 2.75rem;
   --disabled-opacity: 0.6;
+
+  --motion-fast: 180ms;
+  --motion-enter: 520ms;
+  --motion-stagger: 75ms;
+  --motion-ease: cubic-bezier(0.2, 0.75, 0.25, 1);
+  --motion-distance: 1rem;
 }
