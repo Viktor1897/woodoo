@@ -2,14 +2,18 @@
   margin: 0;
   font-family: var(--font-display);
   font-size: var(--text-section);
-  font-weight: var(--weight-regular);
+  font-weight: var(--weight-heading);
   line-height: var(--leading-heading);
+  letter-spacing: var(--tracking-heading);
   text-wrap: balance;
+  text-transform: uppercase;
   overflow-wrap: anywhere;
 }
 
 .heading[data-size="display"] {
   font-size: var(--text-display);
+  line-height: var(--leading-display);
+  letter-spacing: var(--tracking-display);
 }
 
 .heading[data-size="title"] {

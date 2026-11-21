@@ -1,8 +1,8 @@
-import type { ComponentPropsWithoutRef } from "react";
+import type { ComponentPropsWithRef, ComponentPropsWithoutRef } from "react";
 import styles from "./action.module.css";
 
 type ActionProps = {
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "accent";
 };
 
 export function Button({
@@ -10,7 +10,7 @@ export function Button({
   type = "button",
   className,
   ...props
-}: ActionProps & ComponentPropsWithoutRef<"button">) {
+}: ActionProps & ComponentPropsWithRef<"button">) {
   return (
     <button
       {...props}

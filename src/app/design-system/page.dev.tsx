@@ -61,6 +61,17 @@ export default function DesignSystemPreview() {
           </div>
         </div>
       </Section>
+
+      <Section tone="inverse" aria-labelledby="inverse-title">
+        <div className={styles.flow}>
+          <Heading id="inverse-title">Inverse section</Heading>
+          <ActionGroup>
+            <ButtonLink href="#start">Back to start</ButtonLink>
+            <ButtonLink href="#actions" variant="secondary">View actions</ButtonLink>
+            <ButtonLink href="#blocks" variant="accent">View blocks</ButtonLink>
+          </ActionGroup>
+        </div>
+      </Section>
     </main>
   );
 }

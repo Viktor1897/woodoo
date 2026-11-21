@@ -14,6 +14,15 @@
   background: var(--color-section-muted);
 }
 
+.section[data-tone="inverse"] {
+  background: var(--color-inverse);
+  color: var(--color-inverse-text);
+  --color-action: var(--color-inverse-text);
+  --color-action-hover: var(--color-inverse-action-hover);
+  --color-on-action: var(--color-inverse);
+  --color-focus: var(--color-inverse-text);
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--column-min)), 1fr));

@@ -22,7 +22,7 @@ export function Section({
   className,
   children,
   ...props
-}: ComponentPropsWithoutRef<"section"> & { tone?: "default" | "muted" }) {
+}: ComponentPropsWithoutRef<"section"> & { tone?: "default" | "muted" | "inverse" }) {
   return (
     <section
       {...props}

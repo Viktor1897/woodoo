@@ -1,6 +1,360 @@
-.main {
-  min-height: 100svh;
+.skipLink {
+  position: fixed;
+  inset-block-start: var(--space-3);
+  inset-inline-start: var(--container-gutter);
+  z-index: 1;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-control);
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+.skipLink:not(:focus) {
+  clip-path: inset(50%);
+}
+
+.header,
+.home,
+.footer {
+  --container-width: var(--container-wide);
+}
+
+.header {
+  padding-block: var(--space-4);
+}
+
+.headerInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-3) var(--space-6);
+  padding-block: var(--space-4);
+}
+
+.wordmark {
+  display: inline-grid;
+  gap: var(--space-2);
+  color: var(--color-text);
+  font-family: var(--font-display);
+  font-size: var(--text-title);
+  font-weight: var(--weight-heading);
+  letter-spacing: var(--tracking-heading);
+  line-height: 1;
+  text-decoration: none;
+}
+
+.wordmark small {
+  font-family: var(--font-body);
+  font-size: var(--text-small);
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.14em;
+}
+
+.hero {
+  padding-block: 0;
+}
+
+.heroFrame {
+  --hero-scrim: color-mix(in srgb, var(--color-inverse) 68%, transparent);
+
+  display: grid;
+  place-items: center;
+  min-block-size: clamp(25rem, 75svh, 52rem);
+  border: var(--border-width) solid var(--color-action);
+  background:
+    linear-gradient(var(--hero-scrim), var(--hero-scrim)),
+    url("/assets/images/home/academy-training.webp") center 42% / cover no-repeat
+    var(--color-inverse);
+  color: var(--color-inverse-text);
+}
+
+.heroIntro {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-6);
+  padding: clamp(var(--space-8), 5vw, var(--section-space)) var(--space-4);
+  text-align: center;
+  --text-display: var(--text-brand);
+}
+
+.heroIntro .eyebrow {
+  color: inherit;
+}
+
+.heroTagline {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: var(--text-title);
+  font-weight: var(--weight-heading);
+  line-height: var(--leading-heading);
+  text-transform: uppercase;
+}
+
+.heroAccent {
+  padding-inline: var(--space-2);
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+  white-space: nowrap;
+}
+
+.bookingBandSection {
+  padding-block: var(--space-6) var(--section-space);
+}
+
+.bookingBand {
+  display: grid;
+  background: var(--color-action);
+  color: var(--color-on-action);
+}
+
+.bookingBandContent {
+  display: grid;
+  align-content: center;
+  justify-items: start;
+  gap: var(--space-4);
+  padding: clamp(var(--space-6), 4vw, var(--space-12));
+  --color-action: var(--color-inverse-text);
+  --color-action-hover: var(--color-inverse-action-hover);
+  --color-on-action: var(--color-inverse);
+  --color-focus: var(--color-inverse-text);
+}
+
+.bookingBandContent p {
+  max-inline-size: var(--measure);
+  margin: 0;
+  font-size: var(--text-lead);
+}
+
+.bookingBandMedia {
+  position: relative;
+  min-block-size: var(--column-min);
+}
+
+.bookingBandMedia img {
+  position: absolute;
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  object-position: center 42%;
+}
+
+.featureSection {
+  --text-display: var(--text-feature);
+}
+
+.featureSection[data-tone="inverse"] {
+  --color-text-muted: var(--color-inverse-action-hover);
+  --color-border: var(--color-inverse-border);
+}
+
+.academyLayout {
   display: grid;
   align-items: center;
-  text-align: center;
+  gap: clamp(var(--space-6), 5vw, var(--space-12));
+}
+
+.intro,
+.sectionIntro {
+  display: grid;
+  justify-items: start;
+  gap: var(--space-4);
+}
+
+.intro {
+  gap: var(--space-6);
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--color-action);
+  font-size: var(--text-small);
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.sectionIntro p,
+.bookingInner p {
+  max-inline-size: var(--measure);
+  margin: 0;
+  font-size: var(--text-lead);
+}
+
+.sectionIntro p,
+.footer p {
+  color: var(--color-text-muted);
+}
+
+.academyMedia {
+  margin: 0;
+}
+
+.gallery img,
+.academyMedia img {
+  display: block;
+  inline-size: 100%;
+  block-size: auto;
+  border-radius: var(--radius-surface);
+}
+
+.academyMedia figcaption {
+  margin-block-start: var(--space-2);
+  color: var(--color-text-muted);
+  font-size: var(--text-small);
+}
+
+.courses {
+  align-self: stretch;
+  inline-size: 100%;
+  margin: 0;
+  border-block-start: var(--border-width) solid var(--color-border);
+}
+
+.courses > div {
+  padding-block: var(--space-3);
+  border-block-end: var(--border-width) solid var(--color-border);
+}
+
+.courses dt {
+  font-weight: var(--weight-heading);
+}
+
+.courses dd {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.sectionLayout {
+  display: grid;
+  gap: var(--space-8);
+}
+
+.sectionIntro {
+  margin-block-end: var(--space-8);
+}
+
+.sectionLayout .sectionIntro {
+  margin-block-end: 0;
+}
+
+.gallery img {
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.galleryAction {
+  margin-block-start: var(--space-6);
+}
+
+.questions {
+  border-block-start: var(--border-width) solid var(--color-border);
+}
+
+.questions details {
+  padding-block: var(--space-4);
+  border-block-end: var(--border-width) solid var(--color-border);
+}
+
+.questions summary {
+  cursor: pointer;
+  font-weight: var(--weight-semibold);
+}
+
+.questions p {
+  max-inline-size: var(--measure);
+  margin-block: var(--space-3) 0;
+}
+
+.questions a,
+.footer a {
+  color: var(--color-action);
+  text-underline-offset: 0.2em;
+}
+
+.bookingInner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
+}
+
+.bookingInner p {
+  margin-block-start: var(--space-3);
+}
+
+.footer {
+  padding-block: var(--space-12) var(--space-6);
+}
+
+.footerLayout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--column-min)), 1fr));
+  gap: var(--space-6);
+}
+
+.footerLayout > * {
+  display: grid;
+  align-content: start;
+  justify-items: start;
+  gap: var(--space-2);
+  overflow-wrap: anywhere;
+}
+
+.footer p,
+.footer ul {
+  margin: 0;
+}
+
+.footer ul {
+  padding: 0;
+  list-style: none;
+}
+
+.footer .copyright {
+  margin-block-start: var(--space-8);
+  padding-block-start: var(--space-4);
+  border-block-start: var(--border-width) solid var(--color-border);
+  font-size: var(--text-small);
+}
+
+@media (min-width: 48rem) {
+  .bookingBand {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  }
+
+  .sectionLayout {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  }
+
+  .academyLayout {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 47.99rem) {
+  .heroFrame {
+    min-block-size: clamp(20rem, 67svh, 38rem);
+  }
+
+  .header {
+    padding-block: 0;
+  }
+
+  .bookingBandMedia {
+    aspect-ratio: 2 / 1;
+    min-block-size: 0;
+  }
+
+  .academyLayout .intro {
+    grid-row: 1;
+  }
+}
+
+@media (max-width: 30rem) {
+  .header .headerBooking {
+    display: none;
+  }
 }
