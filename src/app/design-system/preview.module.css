@@ -1,0 +1,18 @@
+.flow {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.flow p {
+  max-inline-size: var(--measure);
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.popover {
+  max-inline-size: min(var(--measure), calc(100% - 2 * var(--container-gutter)));
+  padding: var(--space-6);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-surface);
+  background: var(--color-surface);
+}

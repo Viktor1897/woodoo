@@ -1,0 +1,40 @@
+:root {
+  --color-canvas: #f8f5ef;
+  --color-section-muted: #eee9df;
+  --color-surface: #fffdfa;
+  --color-text: #192521;
+  --color-text-muted: #4e5d56;
+  --color-border: #8a978f;
+  --color-action: #0c584c;
+  --color-action-hover: #093e36;
+  --color-on-action: #ffffff;
+  --color-focus: #8d3e28;
+
+  --font-body: system-ui, sans-serif;
+  --font-display: Georgia, "Times New Roman", serif;
+  --text-body: 1rem;
+  --text-title: clamp(1.5rem, 1.3rem + 1vw, 2.125rem);
+  --text-section: clamp(2rem, 1.5rem + 2vw, 3.25rem);
+  --text-display: clamp(2.75rem, 1.75rem + 4vw, 5rem);
+  --weight-regular: 400;
+  --weight-semibold: 600;
+  --leading-body: 1.6;
+  --leading-heading: 1.12;
+
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-6: 1.5rem;
+  --section-space: clamp(3rem, 2rem + 4vw, 6rem);
+  --container-gutter: clamp(1rem, 0.5rem + 2vw, 3rem);
+  --container-width: 72rem;
+  --measure: 60ch;
+  --column-min: 17rem;
+
+  --radius-control: 0.5rem;
+  --radius-surface: 0.875rem;
+  --border-width: 1px;
+  --focus-width: 2px;
+  --focus-offset: 3px;
+  --target-size: 2.75rem;
+  --disabled-opacity: 0.6;
+}

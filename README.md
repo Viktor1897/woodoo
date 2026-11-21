@@ -11,3 +11,10 @@ The homepage lives in `src/app/page.tsx`. Site metadata lives in
 `src/app/layout.tsx`. The original favicon set, manifest, and social preview
 image keep their public URLs. Additional original photos can be recovered from
 `assets/images/` at Git revision `c9e621a`.
+
+The [design system preview](http://localhost:3000/design-system) is available
+with `npm run dev` and shows section, card, heading, and action examples.
+Edit `src/styles/tokens.css` to change shared
+colors, fonts, and spacing. Import primitives from `@/components/ui` and use CSS
+Modules for page-specific composition. See [AGENTS.md](AGENTS.md) for the rules
+that apply to frontend changes.

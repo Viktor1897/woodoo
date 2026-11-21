@@ -1,0 +1,33 @@
+.action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-block-size: var(--target-size);
+  padding: var(--space-2) var(--space-6);
+  border: var(--border-width) solid var(--color-action);
+  border-radius: var(--radius-control);
+  background: var(--color-action);
+  color: var(--color-on-action);
+  font: inherit;
+  font-weight: var(--weight-semibold);
+  text-align: center;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  cursor: pointer;
+}
+
+.action[data-variant="secondary"] {
+  background: transparent;
+  color: var(--color-action);
+}
+
+.action:hover:not(:disabled) {
+  border-color: var(--color-action-hover);
+  background: var(--color-action-hover);
+  color: var(--color-on-action);
+}
+
+.action:disabled {
+  cursor: not-allowed;
+  opacity: var(--disabled-opacity);
+}
