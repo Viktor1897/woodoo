@@ -1,10 +1,23 @@
 .card {
   display: grid;
   align-content: start;
-  gap: var(--space-3);
+  gap: var(--space-4);
   min-inline-size: 0;
   padding: var(--space-6);
-  border: var(--border-width) solid var(--color-border);
+  border: var(--border-width) solid var(--surface-border);
   border-radius: var(--radius-surface);
-  background: var(--color-surface);
+  background: var(--surface-card);
+  color: var(--surface-text);
+}
+
+.card[data-tone="muted"] {
+  background: var(--color-section-muted);
+  border-color: var(--color-border);
+  color: var(--color-text);
+}
+
+.card[data-tone="dark"] {
+  background: var(--color-pine-elevated);
+  border-color: var(--color-dark-border);
+  color: var(--color-dark-text);
 }

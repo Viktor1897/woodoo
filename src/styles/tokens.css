@@ -1,40 +1,97 @@
 :root {
-  --color-canvas: #f8f5ef;
-  --color-section-muted: #eee9df;
-  --color-surface: #fffdfa;
-  --color-text: #192521;
-  --color-text-muted: #4e5d56;
-  --color-border: #8a978f;
-  --color-action: #0c584c;
-  --color-action-hover: #093e36;
-  --color-on-action: #ffffff;
-  --color-focus: #8d3e28;
+  /* Brand & Architectural Palette */
+  --color-pine: #163026;
+  --color-pine-elevated: #1f4033;
+  --color-coral: #ff5e4c;
+  --color-coral-hover: #e54938;
 
-  --font-body: system-ui, sans-serif;
-  --font-display: Georgia, "Times New Roman", serif;
+  /* Neutral Base (Concrete & Editorial Paper) */
+  --color-canvas: #f3f2ee;
+  --color-section-muted: #e6e4dd;
+  --color-surface: #f8f7f4;
+  --color-surface-muted: #e6e4dd;
+  --color-text: #121413;
+  --color-text-muted: #5e635f;
+  --color-border: #d3d1c9;
+
+  /* Dark Surface Tokens */
+  --color-dark-bg: #163026;
+  --color-dark-surface: #1f4033;
+  --color-dark-text: #f3f2ee;
+  --color-dark-text-muted: #a6b7af;
+  --color-dark-border: #2a4d3e;
+
+  /* Semantic Action Tokens */
+  --color-action: var(--color-coral);
+  --color-action-hover: var(--color-coral-hover);
+  --color-on-action: #121413;
+  --color-focus: var(--color-coral);
+
+  /* Contextual Section Tokens (overridden in [data-tone="dark"]) */
+  --surface-bg: var(--color-canvas);
+  --surface-card: var(--color-surface);
+  --surface-card-hover: var(--color-section-muted);
+  --surface-text: var(--color-text);
+  --surface-text-muted: var(--color-text-muted);
+  --surface-border: var(--color-border);
+
+  /* Typography */
+  --font-display: var(--font-barlow-condensed), "Arial Narrow", "Impact", sans-serif;
+  --font-body: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
   --text-body: 1rem;
-  --text-title: clamp(1.5rem, 1.3rem + 1vw, 2.125rem);
-  --text-section: clamp(2rem, 1.5rem + 2vw, 3.25rem);
-  --text-display: clamp(2.75rem, 1.75rem + 4vw, 5rem);
-  --weight-regular: 400;
-  --weight-semibold: 600;
-  --leading-body: 1.6;
-  --leading-heading: 1.12;
+  --text-lead: clamp(1.0625rem, 1rem + 0.3vw, 1.25rem);
+  --text-title: clamp(1.375rem, 1.2rem + 0.65vw, 1.75rem);
+  --text-section: clamp(2.25rem, 1.6rem + 2.4vw, 3.75rem);
+  --text-display: clamp(3.25rem, 2rem + 5.2vw, 6.25rem);
 
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  --leading-body: 1.55;
+  --leading-tight: 1.05;
+  --leading-heading: 0.96;
+
+  --tracking-tight: -0.02em;
+  --tracking-display: -0.015em;
+  --tracking-label: 0.1em;
+
+  /* Spacing Scale */
+  --space-1: 0.25rem;
   --space-2: 0.5rem;
   --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
   --space-6: 1.5rem;
-  --section-space: clamp(3rem, 2rem + 4vw, 6rem);
-  --container-gutter: clamp(1rem, 0.5rem + 2vw, 3rem);
-  --container-width: 72rem;
-  --measure: 60ch;
-  --column-min: 17rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
 
-  --radius-control: 0.5rem;
-  --radius-surface: 0.875rem;
+  /* Layout Dimensions */
+  --header-height: 4.5rem;
+  --section-space: clamp(4rem, 2.5rem + 5vw, 7rem);
+  --container-gutter: clamp(1.25rem, 0.75rem + 2vw, 3rem);
+  --container-width: 82rem;
+  --measure: 62ch;
+  --column-min: 17.5rem;
+
+  /* Crisp Architectural Geometry */
+  --radius-none: 0px;
+  --radius-control: 2px;
+  --radius-surface: 2px;
   --border-width: 1px;
   --focus-width: 2px;
-  --focus-offset: 3px;
+  --focus-offset: 2px;
   --target-size: 2.75rem;
-  --disabled-opacity: 0.6;
+  --disabled-opacity: 0.5;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-fast: 160ms;
+  --duration-base: 240ms;
 }

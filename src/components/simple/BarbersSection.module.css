@@ -1,0 +1,166 @@
+.barbersGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-6);
+}
+
+.barberCard {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-surface);
+  background: var(--color-surface);
+  overflow: hidden;
+  transition: border-color var(--duration-fast) var(--ease-out);
+}
+
+.barberCard:hover {
+  border-color: var(--color-pine);
+}
+
+.portraitWrap {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  background: var(--color-section-muted);
+  overflow: hidden;
+}
+
+.portrait {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform var(--duration-base) var(--ease-out);
+}
+
+.barberCard:hover .portrait {
+  transform: scale(1.025);
+}
+
+.portraitBadges {
+  position: absolute;
+  inset-block-end: var(--space-3);
+  inset-inline-start: var(--space-3);
+}
+
+.barberBody {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  gap: var(--space-3);
+  padding: var(--space-5);
+}
+
+.barberTop {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.locationTag {
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.experience {
+  margin: 0;
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-pine);
+}
+
+.specialty {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.bookBtn {
+  inline-size: 100%;
+  margin-top: var(--space-2);
+}
+
+/* SIMPLE Academy Editorial Banner */
+.academyBanner {
+  margin-top: var(--space-12);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  border: var(--border-width) solid var(--color-dark-border);
+  border-radius: var(--radius-surface);
+  background: var(--color-pine);
+  color: var(--color-dark-text);
+  overflow: hidden;
+}
+
+.academyContent {
+  display: grid;
+  align-content: center;
+  justify-items: start;
+  gap: var(--space-5);
+  padding: clamp(2rem, 4vw, 3.5rem);
+}
+
+.academyTitle {
+  color: var(--color-dark-text);
+  font-size: clamp(1.85rem, 1.4rem + 1.5vw, 2.75rem);
+}
+
+.academyDesc {
+  margin: 0;
+  max-inline-size: 54ch;
+  color: var(--color-dark-text-muted);
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+}
+
+.academySecondary {
+  border-color: var(--color-dark-border);
+  color: var(--color-dark-text);
+  font-variant-numeric: tabular-nums;
+}
+
+.academySecondary:hover:not(:disabled) {
+  border-color: var(--color-dark-text);
+  background: var(--color-dark-text);
+  color: var(--color-pine);
+}
+
+.academyMedia {
+  position: relative;
+  min-block-size: 16rem;
+  border-top: var(--border-width) solid var(--color-dark-border);
+}
+
+.academyImg {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 38rem) {
+  .barbersGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 64rem) {
+  .barbersGrid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .academyBanner {
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  }
+
+  .academyMedia {
+    border-top: none;
+    border-left: var(--border-width) solid var(--color-dark-border);
+  }
+}

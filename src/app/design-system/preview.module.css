@@ -6,7 +6,13 @@
 .flow p {
   max-inline-size: var(--measure);
   margin: 0;
-  color: var(--color-text-muted);
+  color: var(--surface-text-muted);
+}
+
+.badgeRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
 }
 
 .popover {
@@ -15,4 +21,5 @@
   border: var(--border-width) solid var(--color-border);
   border-radius: var(--radius-surface);
   background: var(--color-surface);
+  color: var(--color-text);
 }

@@ -8,10 +8,31 @@
 
 .section {
   padding-block: var(--section-space);
+  background: var(--surface-bg);
+  color: var(--surface-text);
+  border-top: var(--border-width) solid var(--surface-border);
+}
+
+.section:first-of-type {
+  border-top: none;
 }
 
 .section[data-tone="muted"] {
-  background: var(--color-section-muted);
+  --surface-bg: var(--color-section-muted);
+  --surface-card: var(--color-canvas);
+  --surface-card-hover: var(--color-surface);
+  --surface-text: var(--color-text);
+  --surface-text-muted: var(--color-text-muted);
+  --surface-border: var(--color-border);
+}
+
+.section[data-tone="dark"] {
+  --surface-bg: var(--color-dark-bg);
+  --surface-card: var(--color-dark-surface);
+  --surface-card-hover: #254d3e;
+  --surface-text: var(--color-dark-text);
+  --surface-text-muted: var(--color-dark-text-muted);
+  --surface-border: var(--color-dark-border);
 }
 
 .grid {

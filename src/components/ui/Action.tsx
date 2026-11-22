@@ -2,11 +2,13 @@ import type { ComponentPropsWithoutRef } from "react";
 import styles from "./action.module.css";
 
 type ActionProps = {
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "ghost";
+  size?: "default" | "sm";
 };
 
 export function Button({
   variant = "primary",
+  size = "default",
   type = "button",
   className,
   ...props
@@ -17,12 +19,14 @@ export function Button({
       type={type}
       className={[styles.action, className].filter(Boolean).join(" ")}
       data-variant={variant}
+      data-size={size}
     />
   );
 }
 
 export function ButtonLink({
   variant = "primary",
+  size = "default",
   className,
   ...props
 }: ActionProps & ComponentPropsWithoutRef<"a"> & { href: string }) {
@@ -31,6 +35,7 @@ export function ButtonLink({
       {...props}
       className={[styles.action, className].filter(Boolean).join(" ")}
       data-variant={variant}
+      data-size={size}
     />
   );
 }

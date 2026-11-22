@@ -1,24 +1,45 @@
 import type { Metadata } from "next";
+import { Barlow_Condensed, Inter } from "next/font/google";
 import type { ReactNode } from "react";
 import "./globals.css";
 
+const barlowCondensed = Barlow_Condensed({
+  subsets: ["latin", "latin-ext"],
+  weight: ["600", "700"],
+  variable: "--font-barlow-condensed",
+  display: "swap",
+});
+
+const inter = Inter({
+  subsets: ["latin", "latin-ext"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
 const description =
-  "Profesjonalny salon dla mężczyzn. Strzyżenie męskie, strzyżenie brody. Niskie ceny. Darmowy parking dla klientów. Umów się na wizytę już teraz!";
+  "SIMPLE Barbershop w Poznaniu — 3 lokalizacje (Bukowska, Marcelin, Katowicka). Ocena 5.0 z ponad 14 700 opinii. Czynne 7 dni w tygodniu 9:00–21:00. Umów wizytę online.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://simplebarber.pl"),
-  title: "SIMPLE - NAJLEPSZY BARBERSHOP W POZNANIU",
+  title: "SIMPLE Barbershop Poznań — Konkretne strzyżenie. Zero zbędnych słów.",
   description,
-  keywords: ["barbershop Poznań", "fryzjer męski w Poznaniu", "strzyżenie męskie", "strzyżenie brody"],
+  keywords: [
+    "barbershop Poznań",
+    "fryzjer męski w Poznaniu",
+    "strzyżenie męskie Poznań",
+    "strzyżenie brody Poznań",
+    "SIMPLE Barbershop",
+  ],
   openGraph: {
-    title: "Najlepszy fryzjer męski w Poznaniu",
-    siteName: "Najlepszy Barbershop w Poznaniu",
+    title: "SIMPLE Barbershop Poznań",
+    siteName: "SIMPLE Barbershop",
     description,
     type: "website",
     url: "https://simplebarber.pl/",
     locale: "pl_PL",
     alternateLocale: ["en_US"],
-    images: ["/assets/images/IMG_6503.jpg"],
+    images: ["/assets/images/hero-barbershop.jpg"],
   },
   icons: {
     icon: [
@@ -32,7 +53,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="pl">
+    <html lang="pl" className={`${barlowCondensed.variable} ${inter.variable}`}>
       <body>{children}</body>
     </html>
   );

@@ -1,15 +1,10 @@
 import type { Metadata } from "next";
-import { Heading, Section } from "@/components/ui";
-import styles from "./page.module.css";
+import { SimpleSite } from "@/components/simple/SimpleSite";
 
-export const metadata: Metadata = { alternates: { canonical: "/" } };
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 export default function Home() {
-  return (
-    <main>
-      <Section className={styles.main}>
-        <Heading as="h1" size="display">SIMPLE Barbershop</Heading>
-      </Section>
-    </main>
-  );
+  return <SimpleSite />;
 }
