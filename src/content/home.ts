@@ -72,9 +72,9 @@ export const serviceCategories = [
 ];
 
 export const gallery = [
-  { src: "/assets/images/home/fade.webp", alt: "Krótkie strzyżenie z cieniowaniem boków", width: 600, height: 619 },
-  { src: "/assets/images/home/classic.webp", alt: "Klasyczne strzyżenie z włosami zaczesanymi do tyłu", width: 600, height: 600 },
-  { src: "/assets/images/home/texture.webp", alt: "Dłuższa fryzura z naturalną teksturą", width: 600, height: 600 },
+  { src: "/assets/images/home/fade.webp", alt: "Krótkie strzyżenie z cieniowaniem boków", caption: "Krótki fade", width: 600, height: 619 },
+  { src: "/assets/images/home/classic.webp", alt: "Klasyczne strzyżenie z włosami zaczesanymi do tyłu", caption: "Klasyczny zaczes", width: 600, height: 600 },
+  { src: "/assets/images/home/texture.webp", alt: "Dłuższa fryzura z naturalną teksturą", caption: "Długa góra z teksturą", width: 600, height: 600 },
 ];
 
 export const questions = [

@@ -2,17 +2,18 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import "./globals.css";
 
+const title = "SIMPLE Barbershop – strzyżenie włosów i brody w Poznaniu";
 const description =
-  "Profesjonalny salon dla mężczyzn. Strzyżenie męskie, strzyżenie brody. Niskie ceny. Darmowy parking dla klientów. Umów się na wizytę już teraz!";
+  "Zobacz cięcia barberów SIMPLE, poznaj usługi i wybierz jeden z trzech salonów w Poznaniu. Zarezerwuj wizytę w Booksy.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://simplebarber.pl"),
-  title: "SIMPLE - NAJLEPSZY BARBERSHOP W POZNANIU",
+  title,
   description,
   keywords: ["barbershop Poznań", "fryzjer męski w Poznaniu", "strzyżenie męskie", "strzyżenie brody"],
   openGraph: {
-    title: "Najlepszy fryzjer męski w Poznaniu",
-    siteName: "Najlepszy Barbershop w Poznaniu",
+    title,
+    siteName: "SIMPLE Barbershop",
     description,
     type: "website",
     url: "https://simplebarber.pl/",

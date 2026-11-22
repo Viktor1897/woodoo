@@ -1,443 +1,273 @@
+.header, .home, .footer {
+  --container-width: var(--container-wide);
+  --container-gutter: clamp(var(--space-4), 4.5vw, 5rem);
+}
+
 .skipLink {
   position: fixed;
-  inset-block-start: var(--space-3);
-  inset-inline-start: var(--container-gutter);
-  z-index: 1;
+  z-index: 3;
+  inset: var(--space-2) auto auto var(--space-4);
   padding: var(--space-2) var(--space-4);
-  border-radius: var(--radius-control);
   background: var(--color-surface);
-  color: var(--color-text);
+  color: var(--color-action);
 }
 
-.skipLink:not(:focus) {
-  clip-path: inset(50%);
-}
-
-.header,
-.home,
-.footer {
-  --container-width: var(--container-wide);
-}
-
-.header {
-  padding-block: var(--space-3);
-}
+.skipLink:not(:focus) { clip-path: inset(50%); }
 
 .headerInner {
+  min-block-size: 5rem;
   display: flex;
+  gap: var(--space-6);
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
-  gap: var(--space-3) var(--space-6);
-  padding-block: var(--space-4);
+  border-bottom: var(--border-width) solid var(--color-border);
 }
 
 .wordmark {
-  display: inline-grid;
-  gap: var(--space-2);
-  color: var(--color-text);
-  font-family: var(--font-display);
-  font-size: var(--text-title);
-  font-weight: var(--weight-heading);
-  letter-spacing: var(--tracking-heading);
-  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--target-size);
+}
+
+.wordmark img { width: clamp(7rem, 10vw, 9rem); height: auto; }
+
+.desktopNav, .header .instagram { display: none; }
+
+.headerInner a {
+  color: inherit;
   text-decoration: none;
 }
 
-.wordmark small {
-  font-family: var(--font-body);
-  font-size: var(--text-small);
-  font-weight: var(--weight-semibold);
-  letter-spacing: 0.14em;
-}
+.headerInner a:hover { color: var(--color-action); }
 
 .hero {
-  padding-block: 0;
+  padding-block: var(--space-6) 0;
 }
 
-.heroFrame {
-  position: relative;
-  isolation: isolate;
+.heroGrid {
   display: grid;
-  align-items: end;
-  min-block-size: clamp(29rem, 73svh, 51rem);
-  overflow: hidden;
-  border-radius: var(--radius-feature);
-  background: var(--color-inverse);
-  box-shadow: var(--shadow-surface);
-  color: var(--color-inverse-text);
-}
-
-.heroFrame::before,
-.heroFrame::after {
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  content: "";
-}
-
-.heroFrame::before {
-  background: url("/assets/images/home/academy-training.webp") center 41% / cover no-repeat;
-}
-
-.heroFrame::after {
-  background:
-    linear-gradient(
-      0deg,
-      color-mix(in srgb, var(--color-inverse) 95%, transparent),
-      color-mix(in srgb, var(--color-inverse) 74%, transparent) 40%,
-      transparent 88%
-    ),
-    linear-gradient(90deg, color-mix(in srgb, var(--color-inverse) 42%, transparent), transparent 68%);
-}
-
-.heroIntro {
-  display: grid;
-  justify-items: start;
-  gap: var(--space-4);
-  padding: clamp(var(--space-6), 5vw, var(--section-space));
-  --text-display: var(--text-brand);
-  --color-focus: var(--color-inverse-text);
-}
-
-.heroIntro .eyebrow {
-  color: inherit;
-}
-
-.heroIntro > :nth-child(2) {
-  --motion-delay: var(--motion-stagger);
-}
-
-.heroIntro > :nth-child(3) {
-  --motion-delay: calc(2 * var(--motion-stagger));
-}
-
-.heroActions {
-  margin-block-start: var(--space-2);
-  --color-action: var(--color-inverse-text);
-  --color-action-hover: var(--color-inverse-action-hover);
-  --color-on-action: var(--color-inverse);
-  --motion-delay: calc(3 * var(--motion-stagger));
-}
-
-.heroTagline {
-  margin: 0;
-  font-family: var(--font-display);
-  font-size: var(--text-title);
-  font-weight: var(--weight-heading);
-  line-height: var(--leading-heading);
-}
-
-.heroAccent {
-  color: var(--color-accent);
-  white-space: nowrap;
-}
-
-.bookingBandSection {
-  padding-block: var(--space-6) var(--section-space);
-}
-
-.bookingBand {
-  display: grid;
-  overflow: hidden;
-  border-radius: var(--radius-feature);
-  background: var(--color-action);
-  color: var(--color-on-action);
-}
-
-.bookingBandContent {
-  display: grid;
-  align-content: center;
-  justify-items: start;
-  gap: var(--space-4);
-  padding: clamp(var(--space-6), 4vw, var(--space-12));
-  --color-action: var(--color-inverse-text);
-  --color-action-hover: var(--color-inverse-action-hover);
-  --color-on-action: var(--color-inverse);
-  --color-focus: var(--color-inverse-text);
-}
-
-.bookingBandContent p {
-  max-inline-size: var(--measure);
-  margin: 0;
-  font-size: var(--text-lead);
-}
-
-.bookingBandMedia {
-  position: relative;
-  min-block-size: var(--column-min);
-  margin: var(--space-3);
-  overflow: hidden;
-  border-radius: var(--radius-surface);
-}
-
-.bookingBandMedia img {
-  position: absolute;
-  display: block;
-  inline-size: 100%;
-  block-size: 100%;
-  object-fit: cover;
-  object-position: center 42%;
-}
-
-.featureSection {
-  --text-display: var(--text-feature);
-}
-
-.featureSection[data-tone="inverse"] {
-  margin-inline: var(--container-gutter);
-  border-radius: var(--radius-feature);
-  --color-text-muted: var(--color-inverse-action-hover);
-  --color-border: var(--color-inverse-border);
-}
-
-.academyLayout {
-  display: grid;
-  align-items: center;
-  gap: clamp(var(--space-6), 5vw, var(--space-12));
-}
-
-.intro,
-.sectionIntro {
-  display: grid;
-  justify-items: start;
-  gap: var(--space-4);
-}
-
-.intro {
   gap: var(--space-6);
 }
 
-.eyebrow {
+.heroHeading {
+  align-self: end;
+  --text-display: clamp(2.6rem, 13.3vw, 5rem);
+  --leading-display: 0.99;
+}
+
+.kicker, .stripLabel {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
   margin: 0;
-  color: var(--color-action);
   font-size: var(--text-small);
-  font-weight: var(--weight-semibold);
-  letter-spacing: 0.13em;
+  font-weight: var(--weight-heading);
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
-.sectionIntro p,
-.bookingInner p {
-  max-inline-size: var(--measure);
-  margin: 0;
-  font-size: var(--text-lead);
-}
-
-.sectionIntro p,
-.footer p {
-  color: var(--color-text-muted);
-}
-
-.academyMedia {
-  margin: 0;
-}
-
-.gallery img,
-.academyMedia img {
-  display: block;
-  inline-size: 100%;
-  block-size: auto;
-  border-radius: var(--radius-surface);
-}
-
-.academyMedia figcaption {
-  margin-block-start: var(--space-2);
-  color: var(--color-text-muted);
-  font-size: var(--text-small);
-}
-
-.courses {
-  align-self: stretch;
-  inline-size: 100%;
-  margin: 0;
-  border-block-start: var(--border-width) solid var(--color-border);
-}
-
-.courses > div {
-  padding-block: var(--space-3);
-  border-block-end: var(--border-width) solid var(--color-border);
-}
-
-.courses dt {
-  font-weight: var(--weight-heading);
-}
-
-.courses dd {
-  margin: 0;
-  color: var(--color-text-muted);
-}
-
-.sectionLayout {
-  display: grid;
-  gap: var(--space-8);
-}
-
-.sectionIntro {
-  margin-block-end: var(--space-8);
-}
-
-.sectionLayout .sectionIntro {
-  margin-block-end: 0;
-}
-
-.gallery img {
-  aspect-ratio: 1;
-  object-fit: cover;
-}
-
-.galleryPhoto {
-  overflow: hidden;
-  border-radius: var(--radius-surface);
-}
-
-.galleryAction {
-  margin-block-start: var(--space-6);
-}
-
-.questions {
-  display: grid;
-  align-content: start;
-  gap: var(--space-3);
-}
-
-.questions details {
-  padding: var(--space-4) var(--space-6);
-  border: var(--border-width) solid var(--color-border);
-  border-radius: var(--radius-field);
-  background: var(--color-surface);
-}
-
-.questions summary {
-  cursor: pointer;
-  font-weight: var(--weight-semibold);
-}
-
-.questions p {
-  max-inline-size: var(--measure);
-  margin-block: var(--space-3) 0;
-}
-
-.questions a,
-.footer a {
+.kicker::before {
+  content: "";
+  inline-size: 1.8rem;
+  block-size: 0.18rem;
+  background: currentColor;
   color: var(--color-action);
-  text-underline-offset: 0.2em;
 }
 
-.bookingInner {
+.heroHeading h1 { margin-block-start: var(--space-6); }
+
+.poster {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  aspect-ratio: 1.45;
+  container-type: inline-size;
+  background: color-mix(in srgb, var(--color-action) 43%, var(--color-section-muted));
+}
+
+.poster span {
+  position: absolute;
+  inset-block-start: 5%;
+  inset-inline: 0;
+  text-align: center;
+  color: var(--color-canvas);
+  font-family: var(--font-display);
+  font-weight: var(--weight-heading);
+  font-size: 27cqw;
+  letter-spacing: -0.075em;
+  line-height: 1;
+}
+
+.poster img {
+  position: absolute;
+  display: block;
+  inset: auto 0 0;
+  margin-inline: auto;
+  width: 95%;
+  height: 94%;
+  object-fit: contain;
+  object-position: bottom;
+}
+
+.heroBooking {
+  display: grid;
+  justify-items: start;
+  align-content: start;
+  gap: var(--space-6);
+}
+
+.heroBooking p, .intro > p, .sectionHeader p, .bookingInner p {
+  margin: 0;
+  color: var(--color-text-muted);
+  line-height: var(--leading-body);
+}
+
+.heroBooking p { max-width: 33ch; font-size: var(--text-lead); }
+
+.bookingAction {
+  gap: var(--space-3);
+  min-height: 3.35rem;
+  padding-inline: var(--space-6);
+}
+
+.salonStrip {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  gap: var(--space-6);
-}
-
-.bookingInner p {
-  margin-block-start: var(--space-3);
-}
-
-.footer {
-  padding-block: var(--space-12) var(--space-6);
-}
-
-.footerLayout {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--column-min)), 1fr));
-  gap: var(--space-6);
-}
-
-.footerLayout > * {
-  display: grid;
-  align-content: start;
-  justify-items: start;
-  gap: var(--space-2);
-  overflow-wrap: anywhere;
-}
-
-.footer p,
-.footer ul {
-  margin: 0;
-}
-
-.footer ul {
-  padding: 0;
-  list-style: none;
-}
-
-.footer .copyright {
+  gap: var(--space-2) var(--space-6);
   margin-block-start: var(--space-8);
-  padding-block-start: var(--space-4);
-  border-block-start: var(--border-width) solid var(--color-border);
+  border-block: var(--border-width) solid var(--color-border);
+  padding-block: var(--space-4);
   font-size: var(--text-small);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .heroFrame::before {
-    animation: settle-photo calc(2 * var(--motion-enter)) var(--motion-ease) backwards;
-  }
-
-  .questions details[open] p {
-    animation: answer-in var(--motion-fast) var(--motion-ease);
-  }
-
-  @media (hover: hover) {
-    .galleryPhoto img,
-    .bookingBandMedia img {
-      transition: transform var(--motion-enter) var(--motion-ease);
-    }
-
-    .galleryPhoto:hover img,
-    .bookingBandMedia:hover img {
-      transform: scale(1.055);
-    }
-  }
-
-  @keyframes settle-photo {
-    from { transform: scale(1.06); }
-    to { transform: scale(1); }
-  }
-
-  @keyframes answer-in {
-    from { opacity: 0; transform: translateY(var(--space-2)); }
-    to { opacity: 1; transform: translateY(0); }
-  }
+.salonStrip ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
+.salonStrip li + li::before { content: "/"; color: var(--color-text-muted); margin-inline-end: var(--space-4); }
+.hours { margin-inline-start: auto; }
+
+.galleryHeader, .sectionHeader, .bookingInner {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.galleryHeader, .sectionHeader { margin-block-end: var(--space-8); }
+.galleryHeader .kicker { margin-block-end: var(--space-3); }
+
+.galleryHeader h2, .bookingInner h2 {
+  font-size: var(--text-feature);
+  line-height: var(--leading-display);
+  letter-spacing: var(--tracking-display);
+}
+
+.textLink, .questions a, .footer a {
+  color: var(--color-action);
+  font-weight: var(--weight-semibold);
+  text-underline-offset: 0.3em;
+}
+
+.textLink { display: inline-flex; align-items: center; min-height: var(--target-size); }
+
+.gallery {
+  align-items: start;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-6) var(--space-3);
+}
+
+.gallery figure { margin: 0; }
+.gallery figure:first-child { grid-column: 1 / -1; }
+.gallery img, .academyPhoto {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.gallery img { aspect-ratio: 1; object-fit: cover; }
+.gallery figcaption { margin-top: var(--space-2); font-weight: var(--weight-semibold); }
+
+.sectionLayout, .academyLayout { display: grid; gap: var(--space-8); }
+
+.serviceSection {
+  --color-border: var(--color-inverse-border);
+  --color-text-muted: var(--color-inverse-action-hover);
+}
+
+.intro {
+  display: grid;
+  justify-items: start;
+  gap: var(--space-4);
+  align-content: start;
+}
+
+.intro > p { max-width: 40ch; }
+.academyLayout { align-items: center; }
+.academyPhoto { max-height: 30rem; object-fit: cover; object-position: center 36%; }
+.courses { width: 100%; margin: 0; }
+.courses > div { padding-block: var(--space-3); border-top: var(--border-width) solid var(--color-border-control); }
+.courses dt { font-weight: var(--weight-heading); }
+.courses dd { margin: 0; color: var(--color-text-muted); }
+
+.questions details { border-top: var(--border-width) solid var(--color-border); }
+.questions details:last-child { border-bottom: var(--border-width) solid var(--color-border); }
+.questions summary { padding-block: var(--space-4); font-weight: var(--weight-semibold); cursor: pointer; }
+.questions p { max-inline-size: var(--measure); margin: 0 0 var(--space-4); }
+
+.bookingInner { align-items: center; }
+.bookingInner p { color: inherit; margin-block-start: var(--space-3); }
+.footer { padding-block: var(--space-12) var(--space-6); }
+.footerLayout { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--column-min)), 1fr)); gap: var(--space-8); }
+.footerLayout > * { display: grid; align-content: start; justify-items: start; gap: var(--space-3); overflow-wrap: anywhere; }
+.footerLayout img { margin-block: var(--space-2); }
+.footerLayout h2 { font-size: var(--text-body); }
+.footer ul { padding: 0; margin: 0; list-style: none; }
+.footerLayout a { font-weight: normal; }
+.copyright { margin: var(--space-8) 0 0; padding-top: var(--space-4); border-top: var(--border-width) solid var(--color-border); font-size: var(--text-small); }
+
 @media (min-width: 48rem) {
-  .bookingBand {
-    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  .headerInner { min-block-size: 5.5rem; }
+  .desktopNav, .header .instagram { display: flex; align-items: center; }
+  .desktopNav { gap: clamp(var(--space-4), 2.4vw, var(--space-12)); }
+  .desktopNav a, .instagram { display: flex; align-items: center; min-height: var(--target-size); font-size: var(--text-control); font-weight: var(--weight-semibold); }
+  .instagram { gap: var(--space-2); }
+  .mobileNav { display: none; }
+  .hero { padding-block-start: var(--space-8); }
+  .heroGrid {
+    grid-template-columns: minmax(0, 0.94fr) minmax(0, 1.06fr);
+    grid-template-rows: 1fr auto auto 1fr;
+    gap: 0 var(--space-6);
   }
-
-  .sectionLayout {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
-  }
-
-  .academyLayout {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  }
+  .heroHeading { grid-area: 2 / 1; --text-display: clamp(3rem, 6.65vw, 6.85rem); }
+  .heroBooking { grid-area: 3 / 1; margin-top: var(--space-6); gap: var(--space-8); }
+  .poster { grid-area: 1 / 2 / -1; width: 100%; aspect-ratio: 1.22; min-height: 23rem; }
+  .poster img { height: 96%; }
+  .salonStrip { padding-block: var(--space-6); }
+  .gallery { grid-template-columns: 1.29fr 1fr 1fr; gap: var(--space-6); align-items: end; }
+  .gallery figure:first-child { grid-column: auto; }
+  .sectionLayout { grid-template-columns: minmax(0, 1fr) minmax(0, 1.75fr); gap: var(--section-space); }
+  .academyLayout { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--section-space); }
 }
 
 @media (max-width: 47.99rem) {
-  .heroFrame {
-    min-block-size: clamp(20rem, 67svh, 38rem);
-  }
-
-  .header {
-    padding-block: 0;
-  }
-
-  .bookingBandMedia {
-    aspect-ratio: 2 / 1;
-    min-block-size: 0;
-  }
-
-  .academyLayout .intro {
-    grid-row: 1;
-  }
+  .heroHeading h1 { margin-top: var(--space-4); }
+  .heroBooking { gap: var(--space-4); }
+  .heroBooking p { max-width: 44ch; }
+  .stripLabel { width: 100%; }
+  .hours { margin-inline-start: 0; }
 }
 
-@media (max-width: 30rem) {
-  .header .headerBooking {
-    display: none;
-  }
+@media (prefers-reduced-motion: no-preference) {
+  .poster { animation: uncover var(--motion-enter) var(--motion-ease); }
+  .heroHeading h1 { animation: lift var(--motion-enter) var(--motion-ease); }
+  @keyframes uncover { from { clip-path: inset(0 0 12% 0); } to { clip-path: inset(0); } }
+  @keyframes lift { from { transform: translateY(var(--space-3)); } to { transform: translateY(0); } }
 }

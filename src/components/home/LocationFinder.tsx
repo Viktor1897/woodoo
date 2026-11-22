@@ -30,7 +30,7 @@ function LocationDetails({ location }: { location: Location }) {
 
 export function LocationFinder() {
   const [query, setQuery] = useState("");
-  const [view, setView] = useState<"list" | "map">("map");
+  const [view, setView] = useState<"list" | "map">("list");
   const [selectedId, setSelectedId] = useState(locations[0].id);
   const mapButtonRef = useRef<HTMLButtonElement>(null);
   const normalizedQuery = searchKey(query);
